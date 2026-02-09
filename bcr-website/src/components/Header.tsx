@@ -1,12 +1,15 @@
+```tsx
 'use client'
 
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Menu, X, Globe } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+
+// ✅ Works locally + on GitHub Pages (set NEXT_PUBLIC_BASE_PATH=/BCR in production)
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || ""
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -44,16 +47,15 @@ export function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-           <Link href="/" className="flex items-center">
-  <Image
-    src="/icon.png"
-    alt="BCR"
-    width={40}
-    height={40}
-    priority
-  />
-</Link>
-
+            <Link href="/" className="flex items-center">
+              <Image
+                src={`${BASE_PATH}/icon.png`}
+                alt="BCR"
+                width={40}
+                height={40}
+                priority
+              />
+            </Link>
           </div>
 
           {/* Desktop Navigation with Hover Dropdowns */}
@@ -196,7 +198,6 @@ export function Header() {
               <Link href="/login">Login</Link>
             </Button>
 
-            {/* More prominent Try Demo Account button */}
             <Button
               variant="outline"
               className="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white font-semibold transition-all duration-200"
@@ -240,3 +241,4 @@ export function Header() {
     </header>
   )
 }
+```
