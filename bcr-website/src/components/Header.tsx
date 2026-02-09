@@ -1,4 +1,3 @@
-```tsx
 'use client'
 
 import { useState } from 'react'
@@ -8,8 +7,7 @@ import { Menu, X, Globe } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-// ✅ Works locally + on GitHub Pages (set NEXT_PUBLIC_BASE_PATH=/BCR in production)
-const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH || ""
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -49,7 +47,7 @@ export function Header() {
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
               <Image
-                src={`${BASE_PATH}/icon.png`}
+                src={BASE_PATH + "/icon.png"}
                 alt="BCR"
                 width={40}
                 height={40}
@@ -138,7 +136,7 @@ export function Header() {
                 </div>
               </div>
 
-              {/* Resources */}
+              {/* Market Analysis */}
               <div className="relative group">
                 <button className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
                   Market Analysis
@@ -167,7 +165,7 @@ export function Header() {
                 </div>
               </div>
 
-              {/* Company */}
+              {/* About Us */}
               <div className="relative group">
                 <button className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
                   About Us
@@ -189,6 +187,7 @@ export function Header() {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
 
@@ -241,4 +240,3 @@ export function Header() {
     </header>
   )
 }
-```
