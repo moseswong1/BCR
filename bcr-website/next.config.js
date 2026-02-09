@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  distDir: 'out',
+  output: "export",
   trailingSlash: true,
-  images: {
-    unoptimized: true
-  }
+  basePath: "/BCR",
+  assetPrefix: "/BCR/",
+  images: { unoptimized: true },
+
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
-module.exports = nextConfig
+module.exports = nextConfig;
