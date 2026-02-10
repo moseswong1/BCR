@@ -70,10 +70,6 @@ export function Header() {
                       <div className="font-medium">Trading accounts</div>
                       <div className="text-sm text-gray-600">Choose from two account types depending on your strategy</div>
                     </Link>
-                    <Link href="/premium-clients" className="block p-3 hover:bg-gray-50 rounded">
-                      <div className="font-medium">Premium clients</div>
-                      <div className="text-sm text-gray-600">Exclusive rewards and bespoke benefits for high-vol traders</div>
-                    </Link>
                     <Link href="/trading/forex" className="block p-3 hover:bg-gray-50 rounded">
                       <div className="font-medium">Margin/Leverage</div>
                       <div className="text-sm text-gray-600">Understand and manage margin</div>

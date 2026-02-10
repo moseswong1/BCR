@@ -1,9 +1,9 @@
 export function StatsSection() {
   const stats = [
     {
-      value: "18+",
-      label: "Years in the Trading Industry",
-      description: "Serving traders globally since 2006",
+      value: "Operating since 2008",
+      label: "AU Operations",
+      description: "Established and regulated in Australia",
     },
     {
       value: "70+",
@@ -22,13 +22,13 @@ export function StatsSection() {
     },
     {
       value: "$30B",
-      label: "Monthly Trading Volume",
+      label: "Notional Monthly Trading Volume",
       description: "Average monthly processed trade value",
     },
     {
-      value: "3",
-      label: "Regulatory Bodies",
-      description: "Multi-licensed and fully regulated",
+      value: "AU",
+      label: "Regulated in Australia",
+      description: "Services provided under Australian regulatory requirements",
     },
   ];
 

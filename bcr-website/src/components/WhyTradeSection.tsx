@@ -15,8 +15,8 @@ export function WhyTradeSection() {
     },
     {
       icon: Shield,
-      title: "REGULATED & SECURE",
-      description: "Trade with confidence knowing your funds are protected under strict regulatory oversight."
+      title: "TRANSPARENT TRADING CONDITIONS",
+      description: "Clear pricing, straightforward execution policies, and risk-focused trading tools."
     },
     {
       icon: Award,

@@ -85,9 +85,9 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
-                  stat: "18+",
-                  label: "Years in the Trading Industry",
-                  description: "Serving traders globally since 2006"
+                  stat: "Operating since 2008",
+                  label: "AU Operations",
+                  description: "Established and regulated in Australia"
                 },
                 {
                   stat: "70+",
@@ -106,13 +106,13 @@ export default function AboutPage() {
                 },
                 {
                   stat: "$30B",
-                  label: "Monthly Trading Volume",
+                  label: "Notional Monthly Trading Volume",
                   description: "Average monthly processed trade value"
                 },
                 {
-                  stat: "3",
-                  label: "Regulatory Bodies",
-                  description: "Multi-licensed and fully regulated"
+                  stat: "AU",
+                  label: "Regulated in Australia",
+                  description: "Services provided under Australian regulatory requirements"
                 }
               ].map((item, idx) => (
                 <div key={idx} className="bg-white rounded-lg p-6 shadow-sm">

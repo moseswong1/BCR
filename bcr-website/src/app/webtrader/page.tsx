@@ -263,9 +263,9 @@ export default function WebTraderPage() {
                 description: "Trade Bitcoin, Ethereum, and other cryptocurrencies with leveraged positions and tight spreads."
               },
               {
-                title: "Shares",
+                title: "Share CFDs",
                 icon: "target",
-                description: "Own real shares of your favourite companies with fractional shares and zero commission."
+                description: "Trade shares as CFDs with leveraged exposure and no overnight fees."
               }
             ].map((product, idx) => (
               <div key={idx} className="bg-white rounded-lg p-8 shadow-sm hover:shadow-md transition">

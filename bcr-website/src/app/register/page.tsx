@@ -169,10 +169,10 @@ export default function RegisterPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900">
-                      Secure & Regulated
+                      Transparent Trading Conditions
                     </h3>
                     <p className="text-gray-600 text-sm mt-1">
-                      Trade with confidence. Fully regulated and licensed by top-tier authorities worldwide.
+                      Clear pricing, straightforward execution policies, and risk-focused trading tools.
                     </p>
                   </div>
                 </div>
