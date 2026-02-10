@@ -27,11 +27,6 @@ export function StatsSection() {
       label: "Notional Monthly Trading Volume",
       description: "Average monthly processed trade value",
     },
-    {
-      value: "AU",
-      label: "Regulated in Australia",
-      description: "Services provided under Australian regulatory requirements",
-    },
   ];
 
   return (
