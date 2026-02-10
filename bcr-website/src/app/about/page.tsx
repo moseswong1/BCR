@@ -80,9 +80,9 @@ export default function AboutPage() {
           </section>
 
           {/* Key Stats */}
-          <section className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-8">BCR by the Numbers</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <section className="py-12">
+            <h2 className="text-3xl font-bold text-gray-950 mb-10">BCR by the Numbers</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
               {[
                 {
                   stat: "2008",
@@ -113,23 +113,31 @@ export default function AboutPage() {
                 }
               ].map((item, idx) => (
                 item.isFeature ? (
-                  <div key={idx} className="bg-white rounded-lg p-8 shadow-sm flex flex-col justify-center">
-                    <div className="space-y-3">
-                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                  <div key={idx} className="p-8 bg-gradient-to-br from-indigo-50 to-white border border-indigo-200 rounded-xl hover:shadow-lg transition-all duration-300 flex flex-col justify-center">
+                    <div className="space-y-4">
+                      <p className="text-xs font-semibold uppercase tracking-widest text-indigo-700">
                         {item.eyebrow}
                       </p>
                       <div>
-                        <span className="text-5xl font-bold text-indigo-600 leading-tight">{item.stat}</span>
+                        <span className="text-6xl font-black text-indigo-600 leading-tight">{item.stat}</span>
                       </div>
-                      <h3 className="font-semibold text-slate-900 text-base">{item.label}</h3>
-                      <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
+                      <div>
+                        <h3 className="text-lg font-bold text-gray-950 mb-2">{item.label}</h3>
+                        <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
+                      </div>
                     </div>
                   </div>
                 ) : (
-                  <div key={idx} className="bg-white rounded-lg p-6 shadow-sm">
-                    <div className="text-4xl font-bold text-indigo-600 mb-2">{item.stat}</div>
-                    <h3 className="font-semibold text-slate-900 mb-2">{item.label}</h3>
-                    <p className="text-sm text-slate-600">{item.description}</p>
+                  <div key={idx} className="p-8 bg-white border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-md transition-all duration-300 flex flex-col justify-center">
+                    <div className="space-y-4">
+                      <div>
+                        <span className="text-5xl font-black text-indigo-600">{item.stat}</span>
+                      </div>
+                      <div>
+                        <h3 className="text-base font-bold text-gray-950 mb-2">{item.label}</h3>
+                        <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
+                      </div>
+                    </div>
                   </div>
                 )
               ))}

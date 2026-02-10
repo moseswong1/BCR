@@ -30,55 +30,63 @@ export function StatsSection() {
   ];
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-4xl font-bold text-gray-900 mb-2">
-          BCR by the Numbers
-        </h2>
-        <p className="text-gray-600 text-lg mb-12">
-          Industry-leading metrics that showcase our commitment to excellence
-        </p>
+        <div className="mb-16">
+          <h2 className="text-5xl font-bold text-gray-950 mb-4">
+            BCR by the Numbers
+          </h2>
+          <p className="text-gray-600 text-lg max-w-2xl">
+            Industry-leading metrics that showcase our commitment to excellence
+          </p>
+        </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {stats.map((stat, idx) => (
             stat.isFeature ? (
               <div
                 key={idx}
-                className="p-8 border border-gray-200 rounded-lg hover:border-yellow-400 hover:shadow-md transition-all bg-white flex flex-col justify-center"
+                className="lg:col-span-1 p-8 bg-gradient-to-br from-yellow-50 to-white border border-yellow-200 rounded-xl hover:shadow-lg transition-all duration-300 flex flex-col justify-center"
               >
-                <div className="space-y-3">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-gray-500">
+                <div className="space-y-4">
+                  <p className="text-xs font-semibold uppercase tracking-widest text-yellow-700">
                     {stat.eyebrow}
                   </p>
                   <div>
-                    <span className="text-5xl font-bold text-yellow-600 leading-tight">
+                    <span className="text-6xl font-black text-yellow-600 leading-tight">
                       {stat.value}
                     </span>
                   </div>
-                  <h3 className="text-base font-semibold text-gray-900">
-                    {stat.label}
-                  </h3>
-                  <p className="text-xs text-gray-600 leading-relaxed">
-                    {stat.description}
-                  </p>
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-950 mb-2">
+                      {stat.label}
+                    </h3>
+                    <p className="text-sm text-gray-700 leading-relaxed">
+                      {stat.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ) : (
               <div
                 key={idx}
-                className="text-center p-6 border border-gray-200 rounded-lg hover:border-yellow-400 hover:shadow-md transition-all bg-white"
+                className="p-8 bg-white border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-md transition-all duration-300 flex flex-col justify-center"
               >
-                <div className="mb-3">
-                  <span className="text-4xl font-bold text-yellow-600">
-                    {stat.value}
-                  </span>
+                <div className="space-y-4">
+                  <div>
+                    <span className="text-5xl font-black text-yellow-600">
+                      {stat.value}
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-base font-bold text-gray-950 mb-2">
+                      {stat.label}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {stat.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-2 leading-tight">
-                  {stat.label}
-                </h3>
-                <p className="text-xs text-gray-600">
-                  {stat.description}
-                </p>
               </div>
             )
           ))}
