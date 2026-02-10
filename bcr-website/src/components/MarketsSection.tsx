@@ -61,7 +61,7 @@ export function MarketsSection() {
             An extensive range of <span className="text-yellow-400">markets</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Trade Majors, Minors and Exotics, Forex, Spot Metals and Energy, Indices and ASX-listed Stocks, and US Stocks{' '}
+            Trade Majors, Minors and Exotics, Forex CFDs, Spot Metals CFD and Energy CFD, Indices and ASX-listed Share CFDs, and US Share CFDs{' '}
             <span className="text-yellow-400 font-semibold">in one BCR Account</span>.
           </p>
           <div className="pt-4">
