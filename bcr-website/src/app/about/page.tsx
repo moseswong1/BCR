@@ -85,9 +85,11 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {[
                 {
-                  stat: "Operating since 2008",
+                  stat: "2008",
                   label: "AU Operations",
-                  description: "Established and regulated in Australia"
+                  description: "Established and operated in Australia.",
+                  eyebrow: "Operating since",
+                  isFeature: true
                 },
                 {
                   stat: "70+",
@@ -115,11 +117,26 @@ export default function AboutPage() {
                   description: "Services provided under Australian regulatory requirements"
                 }
               ].map((item, idx) => (
-                <div key={idx} className="bg-white rounded-lg p-6 shadow-sm">
-                  <div className="text-4xl font-bold text-indigo-600 mb-2">{item.stat}</div>
-                  <h3 className="font-semibold text-slate-900 mb-2">{item.label}</h3>
-                  <p className="text-sm text-slate-600">{item.description}</p>
-                </div>
+                item.isFeature ? (
+                  <div key={idx} className="bg-white rounded-lg p-8 shadow-sm flex flex-col justify-center">
+                    <div className="space-y-3">
+                      <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                        {item.eyebrow}
+                      </p>
+                      <div>
+                        <span className="text-5xl font-bold text-indigo-600 leading-tight">{item.stat}</span>
+                      </div>
+                      <h3 className="font-semibold text-slate-900 text-base">{item.label}</h3>
+                      <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
+                    </div>
+                  </div>
+                ) : (
+                  <div key={idx} className="bg-white rounded-lg p-6 shadow-sm">
+                    <div className="text-4xl font-bold text-indigo-600 mb-2">{item.stat}</div>
+                    <h3 className="font-semibold text-slate-900 mb-2">{item.label}</h3>
+                    <p className="text-sm text-slate-600">{item.description}</p>
+                  </div>
+                )
               ))}
             </div>
           </section>
