@@ -1,10 +1,12 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, TrendingUp, ArrowRight } from "lucide-react"
+import Link from "next/link"
 
 export function NewsSection() {
   const newsArticles = [
     {
+      id: "fed-independence",
       image: "https://ext.same-assets.com/2057172512/3793660587.png",
       title: "Fed Independence at Risk After Trump Fires Fed Governor Lisa Cook",
       excerpt: "The independence of the U.S. Federal Reserve was thrown into turmoil Monday after President Donald Trump announced he had...",
@@ -12,6 +14,7 @@ export function NewsSection() {
       category: "Federal Reserve"
     },
     {
+      id: "powell-jackson-hole",
       image: "https://ext.same-assets.com/2057172512/53824311.png",
       title: "How Powell's Jackson Hole Speech Shaped the Gold Market's Outlook",
       excerpt: "When Federal Reserve Chair Jerome Powell took the podium at the 2025 Jackson Hole symposium, markets braced for clarity on the future of...",
@@ -19,6 +22,7 @@ export function NewsSection() {
       category: "Commodities"
     },
     {
+      id: "weekly-outlook",
       image: "https://ext.same-assets.com/2057172512/2823707942.png",
       title: "Weekly Outlook 2025.9.1-2025.9.5",
       excerpt: "Key economic events and market opportunities for the upcoming trading week...",
@@ -73,9 +77,11 @@ export function NewsSection() {
                     <Calendar className="w-4 h-4" />
                     <span>{new Date(article.date).toLocaleDateString()}</span>
                   </div>
-                  <Button variant="ghost" size="sm" className="text-yellow-400 hover:text-yellow-300 p-0">
-                    Read more <ArrowRight className="w-4 h-4 ml-1" />
-                  </Button>
+                  <Link href={`/market-analysis/${article.id}`}>
+                    <Button variant="ghost" size="sm" className="text-yellow-400 hover:text-yellow-300 p-0">
+                      Read more <ArrowRight className="w-4 h-4 ml-1" />
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </Card>
