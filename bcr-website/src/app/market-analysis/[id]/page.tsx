@@ -1,10 +1,7 @@
-'use client'
-
-import { useParams } from "next/navigation"
 import { Calendar, Share2, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { PageShell } from "@/components/PageShell"
+import { notFound } from "next/navigation"
 
 const articles = {
   "fed-independence": {
@@ -69,26 +66,16 @@ const articles = {
   }
 }
 
-export default function ArticlePage() {
-  const params = useParams()
-  const id = params?.id as string
+export default async function ArticlePage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params
   const article = articles[id as keyof typeof articles]
 
   if (!article) {
-    return (
-      <PageShell title="Article Not Found">
-        <div className="max-w-4xl mx-auto px-4 py-12 text-center">
-          <p className="text-gray-600 mb-6">The article you're looking for doesn't exist.</p>
-          <Link href="/market-analysis">
-            <Button>Back to Market Analysis</Button>
-          </Link>
-        </div>
-      </PageShell>
-    )
+    notFound()
   }
 
   return (
-    <PageShell title={article.title}>
+    <main className="bg-white">
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Back Link */}
         <Link href="/market-analysis" className="inline-flex items-center text-yellow-600 hover:text-yellow-700 mb-8">
@@ -168,6 +155,14 @@ export default function ArticlePage() {
           </div>
         </div>
       </article>
-    </PageShell>
+    </main>
   )
+}
+
+export function generateStaticParams() {
+  return [
+    { id: "fed-independence" },
+    { id: "powell-jackson-hole" },
+    { id: "weekly-outlook" }
+  ]
 }
