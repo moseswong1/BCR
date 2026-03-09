@@ -13,7 +13,7 @@ export default function MT4Page() {
               MetaTrader 4 (MT4)
             </h1>
             <p className="text-lg text-slate-300 mb-8">
-              The classic platform trusted by millions of traders worldwide. Powerful, intuitive, and built for both discretionary and automated trading with industry-leading spreads.
+              The classic platform trusted by traders. Powerful, intuitive, and built for both discretionary and automated trading with competitive spreads.
             </p>
             <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded font-semibold transition">
               Join now

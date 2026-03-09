@@ -1,31 +1,31 @@
 export function StatsSection() {
   const stats = [
     {
-      value: "2008",
-      label: "AU Operations",
-      description: "Established and operated in Australia.",
-      eyebrow: "Operating since",
+      value: "300+",
+      label: "Products",
+      description: "Trade Forex, Metals, Commodities, Indices, and Shares",
+      eyebrow: "AUD",
       isFeature: true,
     },
     {
-      value: "70+",
-      label: "Countries Served",
-      description: "A truly global presence with diverse clientele",
+      value: "30:1",
+      label: "Max Leverage",
+      description: "Flexible leverage options for your trading strategy",
     },
     {
-      value: "500+",
-      label: "Trading Instruments",
-      description: "Forex, metals, commodities, indices, and stocks",
+      value: "300",
+      label: "Minimum Deposit",
+      description: "AUD minimum to start trading",
     },
     {
-      value: "100K+",
-      label: "Active Traders",
-      description: "Trusted by traders from around the world",
+      value: "0.0+",
+      label: "Spreads",
+      description: "Competitive spreads from 0.0 pips",
     },
     {
-      value: "$30B",
-      label: "Notional Monthly Trading Volume",
-      description: "Average monthly processed trade value",
+      value: "24/5",
+      label: "Client Service",
+      description: "Dedicated support team available around the clock",
     },
   ];
 

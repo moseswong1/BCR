@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import { Eye, EyeOff, Shield, Lock, Smartphone, ArrowRight, Globe, BarChart3, TrendingUp } from "lucide-react";
+import { Eye, EyeOff, Smartphone, ArrowRight, Globe, BarChart3, TrendingUp } from "lucide-react";
 
 export const metadata = { title: "Login" };
 
@@ -9,13 +9,13 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4">
+      <section className="relative bg-gradient-to-r from-yellow-500 via-yellow-600 to-orange-500 text-white py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Access Your Trading Account
           </h1>
-          <p className="text-xl text-blue-100 max-w-2xl">
-            Securely log in to your BCR account and manage your trades across all platforms.
+          <p className="text-xl text-white/90 max-w-2xl">
+            Log in to your BCR account and manage your trades across all platforms.
           </p>
         </div>
       </section>
@@ -35,7 +35,7 @@ export default function LoginPage() {
                   <input
                     type="email"
                     placeholder="your@email.com"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                   />
                 </div>
 
@@ -47,7 +47,7 @@ export default function LoginPage() {
                     <input
                       type="password"
                       placeholder="••••••••"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
                     />
                     <button
                       type="button"
@@ -62,16 +62,16 @@ export default function LoginPage() {
                   <label className="flex items-center">
                     <input
                       type="checkbox"
-                      className="w-4 h-4 accent-blue-600"
+                      className="w-4 h-4 accent-yellow-500"
                     />
                     <span className="ml-2 text-sm text-gray-600">Remember me</span>
                   </label>
-                  <a href="#" className="text-sm text-blue-600 hover:underline font-medium">
+                  <a href="#" className="text-sm text-yellow-600 hover:underline font-medium">
                     Forgot password?
                   </a>
                 </div>
 
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2">
+                <Button className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-2">
                   Sign In
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
@@ -88,7 +88,7 @@ export default function LoginPage() {
 
               <p className="text-center text-gray-600">
                 Don&apos;t have an account?{" "}
-                <Link href="/register" className="text-blue-600 hover:underline font-semibold">
+                <Link href="/register" className="text-yellow-600 hover:underline font-semibold">
                   Create Account
                 </Link>
               </p>
@@ -102,29 +102,29 @@ export default function LoginPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Trading Platforms</h2>
               <div className="grid grid-cols-2 gap-4">
                 <Card className="p-6 border-gray-200 hover:shadow-lg transition cursor-pointer">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 mb-3">
-                    <Globe className="w-5 h-5 text-blue-600" />
+                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-yellow-100 mb-3">
+                    <Globe className="w-5 h-5 text-yellow-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900">WebTrader</h3>
                   <p className="text-sm text-gray-600 mt-1">Browser-based trading</p>
                 </Card>
                 <Card className="p-6 border-gray-200 hover:shadow-lg transition cursor-pointer">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 mb-3">
-                    <BarChart3 className="w-5 h-5 text-blue-600" />
+                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-yellow-100 mb-3">
+                    <BarChart3 className="w-5 h-5 text-yellow-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900">MetaTrader 4</h3>
                   <p className="text-sm text-gray-600 mt-1">Advanced charting tools</p>
                 </Card>
                 <Card className="p-6 border-gray-200 hover:shadow-lg transition cursor-pointer">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 mb-3">
-                    <TrendingUp className="w-5 h-5 text-blue-600" />
+                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-yellow-100 mb-3">
+                    <TrendingUp className="w-5 h-5 text-yellow-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900">MetaTrader 5</h3>
                   <p className="text-sm text-gray-600 mt-1">Next-gen platform</p>
                 </Card>
                 <Card className="p-6 border-gray-200 hover:shadow-lg transition cursor-pointer">
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 mb-3">
-                    <Smartphone className="w-5 h-5 text-blue-600" />
+                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-yellow-100 mb-3">
+                    <Smartphone className="w-5 h-5 text-yellow-600" />
                   </div>
                   <h3 className="font-semibold text-gray-900">Mobile App</h3>
                   <p className="text-sm text-gray-600 mt-1">Trade on the go</p>
@@ -132,39 +132,13 @@ export default function LoginPage() {
               </div>
             </div>
 
-            {/* Security Features */}
-            <Card className="p-6 border-gray-200 bg-gradient-to-br from-blue-50 to-blue-100">
-              <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
-                <Shield className="w-5 h-5 text-blue-600 mr-2" />
-                Banking-Grade Security
-              </h3>
-              <ul className="space-y-2 text-sm text-gray-700">
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                  <span>Two-Factor Authentication (2FA)</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                  <span>256-bit SSL Encryption</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                  <span>Segregated Client Accounts</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-4 h-4 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                  <span>Fraud Monitoring Systems</span>
-                </li>
-              </ul>
-            </Card>
-
             {/* Support */}
-            <Card className="p-6 border-gray-200 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
+            <Card className="p-6 border-gray-200 bg-gradient-to-br from-yellow-500 via-yellow-600 to-orange-500 text-white">
               <h3 className="font-semibold mb-2">Need Help Logging In?</h3>
-              <p className="text-sm text-blue-100 mb-4">
+              <p className="text-sm text-white/90 mb-4">
                 Our support team is available 24/5 to assist you.
               </p>
-              <Link href="/contact" className="text-blue-200 hover:text-white font-semibold flex items-center">
+              <Link href="/contact" className="text-white hover:text-yellow-100 font-semibold flex items-center">
                 Contact Support
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Link>

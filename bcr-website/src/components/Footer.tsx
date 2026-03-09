@@ -103,7 +103,7 @@ export function Footer() {
             <div className="flex flex-wrap justify-center lg:justify-start space-x-6 text-sm text-gray-400">
               <a href="/terms" className="hover:text-white">Terms & Conditions</a>
               <a href="/privacy" className="hover:text-white">Privacy Policy</a>
-              <span>2025 © - All Rights Reserved by Bacera Co Pty Ltd</span>
+              <span>2026 © - All Rights Reserved by Bacera Co Pty Ltd</span>
             </div>
 
             {/* Social media */}

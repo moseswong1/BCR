@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { FileText, Download, Shield, AlertCircle, Scale, FileCheck } from "lucide-react"
+import { FileText, Download, AlertCircle, Scale, FileCheck } from "lucide-react"
 import Link from "next/link"
 
 export default function DisclosureDocumentsPage() {
@@ -15,7 +15,7 @@ export default function DisclosureDocumentsPage() {
       category: "Legal"
     },
     {
-      icon: Shield,
+      icon: FileText,
       title: "Privacy Policy",
       description: "How we collect, use, and protect your personal information",
       url: "https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Privacy-Policy.pdf",
