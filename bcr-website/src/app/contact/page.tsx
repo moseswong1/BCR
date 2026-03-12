@@ -123,7 +123,7 @@ export default function ContactPage() {
               <div className="w-8 h-[2px] bg-yellow-500" />
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-              Our Global Offices
+              Our Australian Offices
             </h2>
           </div>
 

@@ -90,7 +90,7 @@ export default function PartnersPage() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Track Record</h3>
               <p className="text-gray-600 text-sm">
-                Over 18 years serving traders worldwide with consistent growth and reliability.
+                Over 18 years serving Australian traders with consistent growth and reliability.
               </p>
             </Card>
 
@@ -110,7 +110,7 @@ export default function PartnersPage() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Industry Recognition</h3>
               <p className="text-gray-600 text-sm">
-                Partner with an award-winning broker trusted by traders worldwide.
+                Partner with a trusted Australian broker.
               </p>
             </Card>
 
@@ -140,7 +140,7 @@ export default function PartnersPage() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Growth Potential</h3>
               <p className="text-gray-600 text-sm">
-                Scale your business with our global client base and expanding opportunities.
+                Scale your business with our Australian client base and expanding opportunities.
               </p>
             </Card>
           </div>

@@ -82,7 +82,7 @@ export default function MT4Page() {
               </h1>
 
               <p className="text-xl text-slate-300 leading-relaxed mb-8">
-                MetaTrader 4 (MT4) is a globally renowned trading platform known for its reliability and user-friendly interface. It is used by millions of traders worldwide to execute trades in the financial markets.
+                MetaTrader 4 (MT4) is a globally renowned trading platform known for its reliability and user-friendly interface. It is used by millions of traders to execute trades in the financial markets.
               </p>
 
               <div className="flex flex-wrap gap-4">
