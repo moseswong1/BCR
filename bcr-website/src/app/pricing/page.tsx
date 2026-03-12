@@ -297,7 +297,7 @@ export default function SpreadsCommissionSwapPage() {
             Start trading with competitive spreads
           </h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            Sign up in minutes and fund your account in seconds
+            Join thousands of Australian traders
           </p>
           <Link
             href="/register"

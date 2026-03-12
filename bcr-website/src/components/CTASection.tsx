@@ -20,7 +20,7 @@ export function CTASection() {
           Explore more opportunities &amp; potential with BCR now
         </h2>
         <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-          Sign up in minutes and fund your account in seconds
+          Join thousands of Australian traders
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

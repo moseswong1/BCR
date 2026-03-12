@@ -168,8 +168,8 @@ export default function AboutPage() {
               <div className="w-14 h-14 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Award className="w-7 h-7 text-yellow-600" />
               </div>
-              <h3 className="text-lg font-bold text-slate-900 mb-2">Award Winning Broker</h3>
-              <p className="text-slate-600 text-sm">The Multi Award Winning Broker trusted globally</p>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Trusted Broker</h3>
+              <p className="text-slate-600 text-sm">ASIC regulated broker serving traders globally</p>
             </div>
           </div>
         </div>
@@ -178,21 +178,16 @@ export default function AboutPage() {
       {/* Trust Indicators */}
       <section className="py-16 border-t border-slate-200">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid sm:grid-cols-3 gap-8 text-center">
+          <div className="grid sm:grid-cols-2 gap-8 text-center max-w-2xl mx-auto">
             <div className="flex flex-col items-center">
               <Building className="w-10 h-10 text-yellow-500 mb-4" />
-              <h3 className="font-bold text-slate-900 mb-1">Sydney Headquarters</h3>
+              <h3 className="font-bold text-slate-900 mb-1">Sydney Office</h3>
               <p className="text-sm text-slate-600">201 Elizabeth Street, NSW</p>
             </div>
             <div className="flex flex-col items-center">
-              <Users className="w-10 h-10 text-yellow-500 mb-4" />
-              <h3 className="font-bold text-slate-900 mb-1">Client Funds Protected</h3>
-              <p className="text-sm text-slate-600">Segregated client accounts</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Globe className="w-10 h-10 text-yellow-500 mb-4" />
-              <h3 className="font-bold text-slate-900 mb-1">Global Reach</h3>
-              <p className="text-sm text-slate-600">Serving traders worldwide</p>
+              <Building className="w-10 h-10 text-yellow-500 mb-4" />
+              <h3 className="font-bold text-slate-900 mb-1">Melbourne Office</h3>
+              <p className="text-sm text-slate-600">447 Collins St, Melbourne VIC</p>
             </div>
           </div>
         </div>
@@ -209,7 +204,7 @@ export default function AboutPage() {
             Explore more opportunities &amp; potential with BCR now
           </h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            Sign up in minutes and fund in seconds
+            Join thousands of Australian traders
           </p>
           <Link
             href="/register"

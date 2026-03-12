@@ -70,7 +70,7 @@ export default function RegisterPage() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500"> Today</span>
             </h1>
             <p className="mt-6 text-xl text-slate-300 max-w-2xl mx-auto">
-              Join thousands of traders worldwide. Get instant access to global markets and start trading in minutes.
+              Join thousands of Australian traders. Get access to global markets with a trusted local broker.
             </p>
           </div>
         </div>

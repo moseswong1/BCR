@@ -284,7 +284,7 @@ export default function ContactPage() {
             Ready to start trading?
           </h2>
           <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
-            Open an account in minutes and join thousands of traders worldwide
+            Open an account and join thousands of Australian traders
           </p>
           <Link
             href="/register"
