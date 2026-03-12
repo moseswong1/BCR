@@ -1,238 +1,296 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 import Link from "next/link";
-import { ArrowRight, Lock, Globe, Shield, Headphones } from "lucide-react";
+import { 
+  ArrowRight, 
+  Lock, 
+  Globe, 
+  TrendingUp, 
+  Headphones,
+  CheckCircle2,
+  Award,
+  Users,
+  Building2,
+  Zap,
+  Clock
+} from "lucide-react";
 
-export const metadata = { title: "Join Now" };
+export const metadata = { title: "Open Account | BCR" };
 
 export default function RegisterPage() {
+  const benefits = [
+    {
+      icon: Zap,
+      title: "Lightning Fast Execution",
+      description: "Execute trades in milliseconds with our advanced infrastructure",
+    },
+    {
+      icon: TrendingUp,
+      title: "Competitive Spreads",
+      description: "Trade with spreads from 0.0 pips on major currency pairs",
+    },
+    {
+      icon: Globe,
+      title: "Global Markets Access",
+      description: "Trade forex, indices, commodities and more from one account",
+    },
+    {
+      icon: Headphones,
+      title: "24/5 Expert Support",
+      description: "Get help from our dedicated team whenever you need it",
+    },
+  ];
+
+  const trustIndicators = [
+    { value: "300+", label: "Global CFDs" },
+    { value: "$0", label: "Deposit Fees" },
+    { value: "0.0", label: "Spreads From" },
+    { value: "24/5", label: "Support" },
+  ];
+
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-yellow-500 via-yellow-400 to-orange-500 text-white py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Open Your Trading Account Today
-          </h1>
-          <p className="text-xl text-yellow-50 max-w-2xl">
-            Join thousands of traders worldwide. Get instant access to global markets and start trading in minutes.
-          </p>
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-16 sm:py-20">
+        {/* Background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl" />
+        </div>
+        <div className="absolute inset-0 opacity-[0.03] [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-6">
+              <Award className="w-4 h-4 text-yellow-400" />
+              <span className="text-sm font-semibold text-yellow-400">Award-Winning Broker</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              Open Your Trading Account
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500"> Today</span>
+            </h1>
+            <p className="mt-6 text-xl text-slate-300 max-w-2xl mx-auto">
+              Join thousands of traders worldwide. Get instant access to global markets and start trading in minutes.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Registration Form */}
-          <div>
-            <Card className="p-8 border-gray-200">
-              <h2 className="text-2xl font-bold text-gray-900 mb-8">Create Your Account</h2>
+      {/* Main Content */}
+      <section className="py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Registration Form */}
+            <div>
+              <div className="rounded-2xl bg-white border border-slate-200 shadow-xl overflow-hidden">
+                {/* Form header */}
+                <div className="bg-gradient-to-r from-slate-800 to-slate-900 px-8 py-6">
+                  <h2 className="text-2xl font-bold text-white">Create Your Account</h2>
+                  <p className="mt-1 text-slate-400">Fill in your details to get started</p>
+                </div>
 
-              <form className="space-y-6">
-                {/* Personal Information */}
-                <div>
-                  <h3 className="text-sm font-semibold text-gray-700 mb-4 flex items-center">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-yellow-600 text-white text-xs mr-3">
-                      1
-                    </span>
-                    Personal Information
-                  </h3>
+                <form className="p-8 space-y-6">
+                  {/* Personal Information */}
+                  <div>
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center text-sm font-bold text-slate-900">
+                        1
+                      </div>
+                      <h3 className="text-sm font-bold tracking-wide text-slate-900 uppercase">Personal Information</h3>
+                    </div>
 
-                  <div className="grid grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        First Name
+                    <div className="grid grid-cols-2 gap-4 mb-4">
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          First Name
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="John"
+                          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
+                        />
+                      </div>
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          Last Name
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="Doe"
+                          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
+                        />
+                      </div>
+                    </div>
+
+                    <div className="mb-4">
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Email Address
                       </label>
                       <input
-                        type="text"
-                        placeholder="John"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                        type="email"
+                        placeholder="john@example.com"
+                        className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       />
                     </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-1">
-                        Last Name
+
+                    <div className="mb-4">
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Phone Number
                       </label>
                       <input
-                        type="text"
-                        placeholder="Doe"
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+                        type="tel"
+                        placeholder="+61 400 000 000"
+                        className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Country of Residence
+                      </label>
+                      <select className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all bg-white">
+                        <option>Select your country</option>
+                        <option>Australia</option>
+                        <option>United Kingdom</option>
+                        <option>United States</option>
+                        <option>Canada</option>
+                        <option>New Zealand</option>
+                        <option>Singapore</option>
+                        <option>Other</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  {/* Security Information */}
+                  <div className="pt-6 border-t border-slate-200">
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-500 flex items-center justify-center text-sm font-bold text-slate-900">
+                        2
+                      </div>
+                      <h3 className="text-sm font-bold tracking-wide text-slate-900 uppercase">Security Information</h3>
+                    </div>
+
+                    <div className="mb-4">
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Password
+                      </label>
+                      <input
+                        type="password"
+                        placeholder="••••••••"
+                        className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
+                      />
+                      <p className="mt-2 text-xs text-slate-500">
+                        Must be at least 8 characters with uppercase, lowercase, and a number
+                      </p>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Confirm Password
+                      </label>
+                      <input
+                        type="password"
+                        placeholder="••••••••"
+                        className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-yellow-500 focus:border-transparent transition-all"
                       />
                     </div>
                   </div>
 
-                  <div className="mb-4">
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Email Address
+                  {/* Terms */}
+                  <div className="pt-6 border-t border-slate-200">
+                    <label className="flex items-start gap-3">
+                      <input
+                        type="checkbox"
+                        className="mt-1 w-5 h-5 rounded border-slate-300 text-yellow-500 focus:ring-yellow-500"
+                      />
+                      <span className="text-sm text-slate-600">
+                        I agree to the{" "}
+                        <Link href="/disclosure-documents" className="text-yellow-600 hover:underline font-medium">
+                          Terms & Conditions
+                        </Link>{" "}
+                        and{" "}
+                        <Link href="/disclosure-documents" className="text-yellow-600 hover:underline font-medium">
+                          Privacy Policy
+                        </Link>
+                      </span>
                     </label>
-                    <input
-                      type="email"
-                      placeholder="john@example.com"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
-                    />
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Country
-                    </label>
-                    <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent">
-                      <option>Select your country</option>
-                      <option>United States</option>
-                      <option>United Kingdom</option>
-                      <option>Canada</option>
-                      <option>Australia</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                </div>
+                  {/* Submit */}
+                  <Button 
+                    type="submit"
+                    className="w-full h-14 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-slate-900 font-semibold text-lg rounded-xl shadow-lg shadow-yellow-500/25 hover:shadow-yellow-500/40 transition-all hover:scale-[1.02] inline-flex items-center justify-center"
+                  >
+                    Create Account
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
 
-                {/* Security Information */}
-                <div className="pt-6 border-t border-gray-200">
-                  <h3 className="text-sm font-semibold text-gray-700 mb-4 flex items-center">
-                    <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-yellow-600 text-white text-xs mr-3">
-                      2
-                    </span>
-                    Security Information
-                  </h3>
+                  <p className="text-center text-slate-600">
+                    Already have an account?{" "}
+                    <Link href="/login" className="text-yellow-600 hover:underline font-semibold">
+                      Sign In
+                    </Link>
+                  </p>
+                </form>
+              </div>
+            </div>
 
-                  <div className="mb-4">
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Password
-                    </label>
-                    <input
-                      type="password"
-                      placeholder="••••••••"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
-                    />
-                    <p className="text-xs text-gray-500 mt-1">
-                      At least 8 characters, including uppercase, lowercase, and numbers
-                    </p>
-                  </div>
-
-                  <div className="mb-4">
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Confirm Password
-                    </label>
-                    <input
-                      type="password"
-                      placeholder="••••••••"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
-                    />
-                  </div>
-                </div>
-
-                {/* Terms and Conditions */}
-                <div className="flex items-start gap-2">
-                  <input
-                    type="checkbox"
-                    id="terms"
-                    className="mt-1 w-4 h-4 accent-yellow-600"
-                  />
-                  <label htmlFor="terms" className="text-sm text-gray-600">
-                    I agree to the{" "}
-                    <a href="#" className="text-yellow-600 hover:underline font-medium">
-                      Terms of Service
-                    </a>{" "}
-                    and{" "}
-                    <a href="#" className="text-yellow-600 hover:underline font-medium">
-                      Privacy Policy
-                    </a>
-                  </label>
-                </div>
-
-                <Button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2">
-                  Create Account
-                  <ArrowRight className="ml-2 w-4 h-4" />
-                </Button>
-              </form>
-
-              <p className="text-center text-gray-600 mt-6">
-                Already have an account?{" "}
-                <Link href="/login" className="text-yellow-600 hover:underline font-semibold">
-                  Sign In
-                </Link>
-              </p>
-            </Card>
-          </div>
-
-          {/* Benefits Section */}
-          <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Why Join BCR?</h2>
-
-            <div className="space-y-4">
-              <Card className="p-6 border-gray-200 hover:shadow-lg transition">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-100">
-                      <Lock className="h-6 w-6 text-yellow-600" />
+            {/* Right Column - Benefits */}
+            <div className="space-y-8">
+              {/* Benefits cards */}
+              <div className="space-y-4">
+                {benefits.map((benefit, idx) => (
+                  <div 
+                    key={idx}
+                    className="group flex items-start gap-4 p-6 rounded-2xl bg-white border border-slate-200 hover:border-yellow-300 hover:shadow-lg hover:shadow-yellow-500/10 transition-all"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-100 to-yellow-50 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <benefit.icon className="w-6 h-6 text-yellow-600" />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-slate-900 mb-1">{benefit.title}</h3>
+                      <p className="text-sm text-slate-600">{benefit.description}</p>
                     </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      Transparent Trading Conditions
-                    </h3>
-                    <p className="text-gray-600 text-sm mt-1">
-                      Clear pricing, straightforward execution policies, and risk-focused trading tools.
-                    </p>
-                  </div>
-                </div>
-              </Card>
+                ))}
+              </div>
 
-              <Card className="p-6 border-gray-200 hover:shadow-lg transition">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-100">
-                      <Globe className="h-6 w-6 text-yellow-600" />
+              {/* Trust stats */}
+              <div className="rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 p-8">
+                <h3 className="text-lg font-bold text-white mb-6">Why Traders Choose BCR</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  {trustIndicators.map((stat, idx) => (
+                    <div key={idx}>
+                      <div className="text-2xl font-bold text-yellow-400">{stat.value}</div>
+                      <div className="text-sm text-slate-400">{stat.label}</div>
                     </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      Global Markets Access
-                    </h3>
-                    <p className="text-gray-600 text-sm mt-1">
-                      Trade 500+ instruments including forex, commodities, crypto, and indices.
-                    </p>
-                  </div>
+                  ))}
                 </div>
-              </Card>
-
-              <Card className="p-6 border-gray-200 hover:shadow-lg transition">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-100">
-                      <Shield className="h-6 w-6 text-yellow-600" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      Instant Account Opening
-                    </h3>
-                    <p className="text-gray-600 text-sm mt-1">
-                      Open your account and start trading in minutes with our streamlined process.
-                    </p>
-                  </div>
-                </div>
-              </Card>
-
-              <Card className="p-6 border-gray-200 hover:shadow-lg transition">
-                <div className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-100">
-                      <Headphones className="h-6 w-6 text-yellow-600" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
-                      24/5 Expert Support
-                    </h3>
-                    <p className="text-gray-600 text-sm mt-1">
-                      Get help from our professional support team throughout your trading week.
-                    </p>
-                  </div>
-                </div>
-              </Card>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900">
+            Prefer to practice first?
+          </h2>
+          <p className="mt-4 text-lg text-slate-600">
+            Open a risk-free demo account with $50,000 in virtual funds
+          </p>
+          <Button 
+            variant="outline"
+            className="mt-8 h-12 px-8 border-2 border-slate-300 text-slate-700 hover:bg-white font-semibold rounded-xl"
+            asChild
+          >
+            <Link href="/demo" className="inline-flex items-center">
+              Try Demo Account
+              <ArrowRight className="w-4 h-4 ml-2" />
+            </Link>
+          </Button>
         </div>
       </section>
     </main>

@@ -2,8 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
-import { Card } from "@/components/ui/card"
+import { ChevronRight } from 'lucide-react'
 
 export function MarketsSection() {
   const [activeTab, setActiveTab] = useState('Popular')
@@ -54,79 +53,96 @@ export function MarketsSection() {
   }
 
   return (
-    <section id="markets" className="py-16 bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center space-y-6 mb-12">
-          <h2 className="text-4xl font-bold">
+    <section id="markets" className="py-20 sm:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-600/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-6">
+        <div className="text-center space-y-6 mb-16">
+          <div className="inline-flex items-center gap-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400">
+            Trade on Spreads from 0.0+ pips
+          </div>
+          
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
             An extensive range of <span className="text-yellow-400">markets</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            Trade Majors, Minors and Exotics, Forex CFDs, Spot Metals CFD and Energy CFD, Indices and ASX-listed Share CFDs, and US Share CFDs{' '}
+          
+          <p className="text-xl text-slate-300 max-w-4xl mx-auto">
+            Trade Majors, Minors and Exotics, Forex, Spot Metals and Energy, Indices and ASX-listed Stocks, and US Stocks{' '}
             <span className="text-yellow-400 font-semibold">in one BCR Account</span>.
           </p>
-          <div className="pt-4">
-            <a href="/markets" className="inline-flex items-center text-yellow-400 font-semibold hover:text-yellow-300">
-              Explore More →
-            </a>
-          </div>
+          
+          <Link 
+            href="/range-of-markets" 
+            className="inline-flex items-center gap-2 text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
+          >
+            Explore More
+            <ChevronRight className="w-4 h-4" />
+          </Link>
         </div>
 
         {/* Tabs */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {tabs.map((tab) => (
-            <Button
+            <button
               key={tab}
-              variant={activeTab === tab ? "default" : "outline"}
-              className={`${
+              className={`px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-200 ${
                 activeTab === tab
-                  ? 'bg-yellow-500 text-black hover:bg-yellow-600 border-yellow-500'
-                  : 'border-yellow-500 bg-transparent text-white hover:bg-yellow-500 hover:text-black transition-all duration-200'
+                  ? 'bg-yellow-500 text-black shadow-lg shadow-yellow-500/25'
+                  : 'bg-white/5 border border-white/10 text-white hover:bg-white/10'
               }`}
               onClick={() => setActiveTab(tab)}
             >
               {tab}
-            </Button>
+            </button>
           ))}
         </div>
 
         {/* Trading table */}
-        <Card className="bg-gray-800 border-gray-700">
+        <div className="bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden backdrop-blur-sm">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b border-gray-700">
-                  <th className="text-left py-4 px-6 text-gray-300 font-semibold">CODE</th>
-                  <th className="text-left py-4 px-6 text-gray-300 font-semibold">BID</th>
-                  <th className="text-left py-4 px-6 text-gray-300 font-semibold">ASK</th>
-                  <th className="text-left py-4 px-6 text-gray-300 font-semibold">SPREAD</th>
-                  <th className="text-left py-4 px-6 text-gray-300 font-semibold">TRADE</th>
+                <tr className="border-b border-slate-700">
+                  <th className="text-left py-4 px-6 text-slate-400 font-semibold text-sm uppercase tracking-wider">Code</th>
+                  <th className="text-left py-4 px-6 text-slate-400 font-semibold text-sm uppercase tracking-wider">Bid</th>
+                  <th className="text-left py-4 px-6 text-slate-400 font-semibold text-sm uppercase tracking-wider">Ask</th>
+                  <th className="text-left py-4 px-6 text-slate-400 font-semibold text-sm uppercase tracking-wider">Spread</th>
+                  <th className="text-left py-4 px-6 text-slate-400 font-semibold text-sm uppercase tracking-wider">Trade</th>
                 </tr>
               </thead>
               <tbody>
                 {instrumentData[activeTab as keyof typeof instrumentData].map((instrument, index) => (
-                  <tr key={index} className="border-b border-gray-700/50 hover:bg-gray-700/30">
+                  <tr key={index} className="border-b border-slate-700/50 hover:bg-slate-700/30 transition-colors">
                     <td className="py-4 px-6">
-                      <div className="flex items-center space-x-2">
-                        <span className="font-semibold text-white">{instrument.code}</span>
+                      <div className="flex items-center gap-3">
+                        <span className="font-bold text-white">{instrument.code}</span>
                         <div className={`w-2 h-2 rounded-full ${
                           instrument.trend === 'up' ? 'bg-green-500' : 'bg-red-500'
                         }`}></div>
                       </div>
                     </td>
-                    <td className="py-4 px-6 font-mono text-gray-300">{instrument.bid}</td>
-                    <td className="py-4 px-6 font-mono text-gray-300">{instrument.ask}</td>
-                    <td className="py-4 px-6 font-mono text-gray-300">{instrument.spread}</td>
+                    <td className="py-4 px-6 font-mono text-slate-300">{instrument.bid}</td>
+                    <td className="py-4 px-6 font-mono text-slate-300">{instrument.ask}</td>
                     <td className="py-4 px-6">
-                      <div className="flex space-x-2">
+                      <span className="px-2 py-1 bg-yellow-500/10 text-yellow-400 rounded font-mono text-sm">
+                        {instrument.spread}
+                      </span>
+                    </td>
+                    <td className="py-4 px-6">
+                      <div className="flex gap-2">
                         <Link href="/login">
-                          <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white px-3 py-1">
+                          <button className="px-4 py-1.5 bg-green-600 hover:bg-green-500 text-white text-sm font-bold rounded-lg transition-colors">
                             BUY
-                          </Button>
+                          </button>
                         </Link>
                         <Link href="/login">
-                          <Button size="sm" className="bg-red-600 hover:bg-red-700 text-white px-3 py-1">
+                          <button className="px-4 py-1.5 bg-red-600 hover:bg-red-500 text-white text-sm font-bold rounded-lg transition-colors">
                             SELL
-                          </Button>
+                          </button>
                         </Link>
                       </div>
                     </td>
@@ -135,7 +151,7 @@ export function MarketsSection() {
               </tbody>
             </table>
           </div>
-        </Card>
+        </div>
       </div>
     </section>
   )

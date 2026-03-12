@@ -1,354 +1,298 @@
+import Link from "next/link";
+import { Phone, Mail, MessageCircle, MapPin, Clock, Globe, ChevronRight, Send } from "lucide-react";
+
 export const metadata = { title: "Contact Us - Get in Touch with BCR" };
 
 export default function ContactPage() {
+  const contactMethods = [
+    { icon: Phone, title: "Call Us", content: "+61 2 8459 8050", subtitle: "Available 24/5" },
+    { icon: Mail, title: "Email Us", content: "info@bcr.com", subtitle: "Quick response within 24 hours" },
+    { icon: MessageCircle, title: "Live Chat", content: "Chat with our team", subtitle: "Instant assistance available" }
+  ];
+
+  const offices = [
+    {
+      location: "Sydney Headquarters",
+      address: "Level 18, Suite 3, 201 Elizabeth Street, Sydney NSW 2000, Australia",
+      phone: "+61 2 8459 8050",
+      email: "sydney@bcr.com",
+      timezone: "AEDT (UTC+11)"
+    },
+    {
+      location: "Melbourne Office",
+      address: "447 Collins Street, Melbourne VIC 3000, Australia",
+      phone: "+61 2 8459 8050",
+      email: "melbourne@bcr.com",
+      timezone: "AEDT (UTC+11)"
+    }
+  ];
+
+  const departments = [
+    { department: "General Information", email: "info@bcr.com", description: "Account setup, general inquiries, and trading questions" },
+    { department: "Sales & Support", email: "support@bcr.com", description: "Trading assistance, platform issues, and account support" },
+    { department: "Marketing & Partnerships", email: "partnerships@bcr.com", description: "IB programs, affiliates, and business partnerships" },
+    { department: "Compliance", email: "compliance@bcr.com", description: "Regulatory inquiries and compliance matters" }
+  ];
+
   return (
     <main className="bg-white text-slate-900">
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#070B0F]">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-cyan-400 blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-emerald-400 blur-3xl" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-[400px]">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-600/10 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:py-18">
+        <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-white/90">
+            <div className="inline-flex items-center gap-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400 mb-6">
+              <MessageCircle className="w-4 h-4" />
               Customer Support
-              <span className="h-1 w-1 rounded-full bg-cyan-400" />
-              24/5 Assistance
-            </p>
-
-            <h1 className="mt-5 text-3xl font-semibold leading-tight text-white sm:text-5xl">
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight mb-6">
               Contact Us
             </h1>
 
-            <p className="mt-4 text-base leading-7 text-white/80 sm:text-lg">
+            <p className="text-xl text-slate-300 leading-relaxed mb-8">
               Get in touch with our dedicated support team. Available 24/5 to assist you with any questions or concerns.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="flex flex-wrap gap-4">
               <a
                 href="#contact-form"
-                className="inline-flex items-center justify-center rounded-xl bg-[#FFD400] px-5 py-3 text-sm font-semibold text-black hover:brightness-95"
+                className="inline-flex items-center gap-2 rounded-xl bg-yellow-500 hover:bg-yellow-400 px-6 py-3 font-semibold text-black transition-all shadow-lg shadow-yellow-500/25"
               >
                 Send a Message
+                <Send className="w-4 h-4" />
               </a>
               <a
                 href="tel:+61284598050"
-                className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-3 font-semibold text-white transition-all backdrop-blur-sm"
               >
+                <Phone className="w-4 h-4" />
                 Call Us
               </a>
             </div>
           </div>
         </div>
+
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
       </section>
 
-      {/* CONTENT */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-          Support / Get in Touch
-        </div>
-
-        <div className="mt-8 space-y-12">
-          {/* Contact Info Overview */}
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900 mb-8">Multiple Ways to Reach Us</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: "📞",
-                  title: "Call Us",
-                  content: "+61 2 8459 8050",
-                  subtitle: "Available 24/5"
-                },
-                {
-                  icon: "✉️",
-                  title: "Email Us",
-                  content: "info@bcr.com",
-                  subtitle: "Quick response within 24 hours"
-                },
-                {
-                  icon: "💬",
-                  title: "Live Chat",
-                  content: "Chat with our team",
-                  subtitle: "Instant assistance available"
-                }
-              ].map((item, idx) => (
-                <div key={idx} className="bg-gradient-to-br from-cyan-50 to-emerald-50 rounded-lg p-6 border border-cyan-200">
-                  <div className="text-4xl mb-3">{item.icon}</div>
-                  <h3 className="font-semibold text-slate-900 text-lg mb-2">{item.title}</h3>
-                  <p className="text-slate-700 font-medium mb-1">{item.content}</p>
-                  <p className="text-sm text-slate-600">{item.subtitle}</p>
-                </div>
-              ))}
+      {/* Contact Methods */}
+      <section className="py-20 sm:py-28">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-4">
+              <div className="w-8 h-[2px] bg-yellow-500" />
+              Get in Touch
+              <div className="w-8 h-[2px] bg-yellow-500" />
             </div>
-          </section>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+              Multiple Ways to Reach Us
+            </h2>
+          </div>
 
-          {/* Office Locations */}
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900 mb-8">Our Global Offices</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                {
-                  location: "Sydney Headquarters",
-                  address: "Level 18, Suite 3, 201 Elizabeth Street, Sydney NSW 2000, Australia",
-                  phone: "+61 2 8459 8050",
-                  email: "sydney@bcr.com",
-                  timezone: "AEDT (UTC+11)"
-                },
-                {
-                  location: "Melbourne Office",
-                  address: "447 Collins Street, Melbourne VIC 3000, Australia",
-                  phone: "+61 2 8459 8050",
-                  email: "melbourne@bcr.com",
-                  timezone: "AEDT (UTC+11)"
-                }
-              ].map((office, idx) => (
-                <div key={idx} className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-4">{office.location}</h3>
-                  <div className="space-y-3">
+          <div className="grid sm:grid-cols-3 gap-6">
+            {contactMethods.map((item, idx) => (
+              <div 
+                key={idx} 
+                className="group relative bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:border-yellow-300 hover:shadow-xl hover:shadow-yellow-500/10 transition-all duration-300 text-center"
+              >
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="w-16 h-16 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  <item.icon className="w-8 h-8 text-yellow-600" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-yellow-600 font-semibold mb-1">{item.content}</p>
+                <p className="text-sm text-slate-500">{item.subtitle}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Office Locations */}
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-4">
+              <div className="w-8 h-[2px] bg-yellow-500" />
+              Our Offices
+              <div className="w-8 h-[2px] bg-yellow-500" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+              Our Global Offices
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {offices.map((office, idx) => (
+              <div 
+                key={idx} 
+                className="group relative bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:border-yellow-300 hover:shadow-xl hover:shadow-yellow-500/10 transition-all duration-300"
+              >
+                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <h3 className="text-xl font-bold text-slate-900 mb-6">{office.location}</h3>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <MapPin className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-xs font-semibold text-slate-500 uppercase mb-1">Address</p>
                       <p className="text-slate-700">{office.address}</p>
                     </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Phone className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-xs font-semibold text-slate-500 uppercase mb-1">Phone</p>
-                      <p className="text-slate-700"><a href={`tel:${office.phone}`} className="hover:text-cyan-600">{office.phone}</a></p>
+                      <a href={`tel:${office.phone}`} className="text-slate-700 hover:text-yellow-600 transition-colors">{office.phone}</a>
                     </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Mail className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-xs font-semibold text-slate-500 uppercase mb-1">Email</p>
-                      <p className="text-slate-700"><a href={`mailto:${office.email}`} className="hover:text-cyan-600">{office.email}</a></p>
+                      <a href={`mailto:${office.email}`} className="text-slate-700 hover:text-yellow-600 transition-colors">{office.email}</a>
                     </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Clock className="w-5 h-5 text-yellow-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-xs font-semibold text-slate-500 uppercase mb-1">Timezone</p>
                       <p className="text-slate-700">{office.timezone}</p>
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Department Contacts */}
+      <section className="py-20 sm:py-28 bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-4">
+              <div className="w-8 h-[2px] bg-yellow-500" />
+              Departments
+              <div className="w-8 h-[2px] bg-yellow-500" />
             </div>
-          </section>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+              Department Contacts
+            </h2>
+            <p className="text-slate-600 mt-4">Reach out to the right department for faster assistance</p>
+          </div>
 
-          {/* Department Contacts */}
-          <section className="bg-slate-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Department Contacts</h2>
-            <p className="text-slate-700 mb-6">Reach out to the right department for faster assistance:</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  department: "General Information",
-                  email: "info@bcr.com",
-                  description: "Account setup, general inquiries, and trading questions"
-                },
-                {
-                  department: "Sales & Support",
-                  email: "support@bcr.com",
-                  description: "Trading assistance, platform issues, and account support"
-                },
-                {
-                  department: "Marketing & Partnerships",
-                  email: "marketing@bcr.com",
-                  description: "Partnership opportunities, promotions, and events"
-                },
-                {
-                  department: "Compliance & Legal",
-                  email: "compliance@bcr.com",
-                  description: "Regulatory inquiries and compliance documentation"
-                }
-              ].map((dept, idx) => (
-                <div key={idx} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h3 className="font-semibold text-slate-900 text-lg mb-2">{dept.department}</h3>
-                  <a href={`mailto:${dept.email}`} className="text-cyan-600 hover:text-cyan-700 font-medium mb-3 block">{dept.email}</a>
-                  <p className="text-slate-600 text-sm">{dept.description}</p>
+          <div className="grid sm:grid-cols-2 gap-6">
+            {departments.map((dept, idx) => (
+              <div key={idx} className="flex gap-4 p-6 bg-slate-50 rounded-xl border border-slate-200 hover:border-yellow-300 transition-colors">
+                <div className="w-10 h-10 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-yellow-600" />
                 </div>
-              ))}
+                <div>
+                  <h3 className="font-bold text-slate-900 mb-1">{dept.department}</h3>
+                  <a href={`mailto:${dept.email}`} className="text-yellow-600 hover:text-yellow-700 text-sm font-semibold">{dept.email}</a>
+                  <p className="text-slate-600 text-sm mt-1">{dept.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Form */}
+      <section id="contact-form" className="py-20 sm:py-28 bg-gradient-to-b from-slate-50 to-white">
+        <div className="max-w-3xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-4">
+              <div className="w-8 h-[2px] bg-yellow-500" />
+              Send a Message
+              <div className="w-8 h-[2px] bg-yellow-500" />
             </div>
-          </section>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+              Get in Touch
+            </h2>
+          </div>
 
-          {/* Contact Form */}
-          <section id="contact-form" className="bg-white border border-slate-200 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-2">Send Us a Message</h2>
-            <p className="text-slate-600 mb-8">Fill out the form below and our team will get back to you within 24 hours.</p>
-            
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-semibold text-slate-900 mb-2">
-                    First Name <span className="text-red-600">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    required
-                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="John"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-semibold text-slate-900 mb-2">
-                    Last Name <span className="text-red-600">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    required
-                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">
-                    Email Address <span className="text-red-600">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="john@example.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-semibold text-slate-900 mb-2">
-                    Phone Number <span className="text-red-600">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    required
-                    className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    placeholder="+61 2 8459 8050"
-                  />
-                </div>
-              </div>
-
+          <form className="bg-white rounded-2xl p-8 shadow-sm border border-slate-200">
+            <div className="grid sm:grid-cols-2 gap-6 mb-6">
               <div>
-                <label htmlFor="subject" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Subject <span className="text-red-600">*</span>
-                </label>
-                <select
-                  id="subject"
-                  required
-                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                >
-                  <option value="">Select a subject...</option>
-                  <option value="trading">Trading Support</option>
-                  <option value="account">Account Inquiry</option>
-                  <option value="technical">Technical Issue</option>
-                  <option value="compliance">Compliance</option>
-                  <option value="partnership">Partnership</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Message <span className="text-red-600">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  required
-                  rows={6}
-                  className="w-full px-4 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                  placeholder="Tell us how we can help..."
+                <label className="block text-sm font-semibold text-slate-700 mb-2">First Name</label>
+                <input 
+                  type="text" 
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 outline-none transition-all"
+                  placeholder="John"
                 />
               </div>
-
-              <div className="flex items-start gap-3">
-                <input
-                  type="checkbox"
-                  id="consent"
-                  required
-                  className="mt-1"
+              <div>
+                <label className="block text-sm font-semibold text-slate-700 mb-2">Last Name</label>
+                <input 
+                  type="text" 
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 outline-none transition-all"
+                  placeholder="Doe"
                 />
-                <label htmlFor="consent" className="text-sm text-slate-600">
-                  I agree to receive communications from BCR and have read the <a href="/privacy" className="text-cyan-600 hover:text-cyan-700 underline">Privacy Policy</a>.
-                </label>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-[#FFD400] hover:brightness-95 text-black font-semibold py-3 rounded-lg transition-all"
-              >
-                Send Message
-              </button>
-            </form>
-          </section>
-
-          {/* Social Media & Support Hours */}
-          <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-cyan-50 rounded-lg p-8 border border-cyan-200">
-              <h3 className="text-lg font-semibold text-slate-900 mb-4">Connect With Us</h3>
-              <p className="text-slate-700 mb-6">Follow BCR on social media for updates, market insights, and trading tips.</p>
-              <div className="flex gap-4">
-                {[
-                  { name: "Facebook", icon: "f", url: "#" },
-                  { name: "Twitter", icon: "𝕏", url: "#" },
-                  { name: "Instagram", icon: "📷", url: "#" },
-                  { name: "LinkedIn", icon: "in", url: "#" }
-                ].map((social, idx) => (
-                  <a key={idx} href={social.url} className="w-10 h-10 bg-white rounded-full flex items-center justify-center hover:bg-cyan-100 transition-colors" title={social.name}>
-                    {social.icon}
-                  </a>
-                ))}
               </div>
             </div>
-
-            <div className="bg-emerald-50 rounded-lg p-8 border border-emerald-200">
-              <h3 className="text-lg font-semibold text-slate-900 mb-4">Support Hours</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-slate-700 font-medium">Monday - Friday</span>
-                  <span className="text-slate-600">24 Hours</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-slate-700 font-medium">Saturday</span>
-                  <span className="text-slate-600">24 Hours</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-slate-700 font-medium">Sunday</span>
-                  <span className="text-slate-600">Closed</span>
-                </div>
-                <p className="text-xs text-slate-600 mt-4 pt-4 border-t border-slate-300">
-                  Response times may vary based on inquiry complexity. Critical issues are prioritized.
-                </p>
-              </div>
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Email</label>
+              <input 
+                type="email" 
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 outline-none transition-all"
+                placeholder="john@example.com"
+              />
             </div>
-          </section>
-
-          {/* FAQ Preview */}
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Frequently Asked Questions</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  q: "How long does account setup take?",
-                  a: "Most accounts are verified within 24 hours. You can start trading immediately after approval."
-                },
-                {
-                  q: "What are your support hours?",
-                  a: "We offer 24/5 support (Monday-Saturday). Email inquiries are responded to within 24 hours."
-                },
-                {
-                  q: "How can I reset my password?",
-                  a: "Use the 'Forgot Password' link on the login page. Reset instructions will be sent to your email."
-                },
-                {
-                  q: "What payment methods do you accept?",
-                  a: "We accept bank transfers, credit/debit cards, and several e-wallet methods for deposits."
-                }
-              ].map((faq, idx) => (
-                <div key={idx} className="bg-white border border-slate-200 rounded-lg p-6">
-                  <h4 className="font-semibold text-slate-900 mb-2">{faq.q}</h4>
-                  <p className="text-slate-700 text-sm">{faq.a}</p>
-                </div>
-              ))}
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Subject</label>
+              <select className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 outline-none transition-all">
+                <option>General Inquiry</option>
+                <option>Account Support</option>
+                <option>Trading Questions</option>
+                <option>Partnership Opportunities</option>
+                <option>Other</option>
+              </select>
             </div>
-          </section>
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-slate-700 mb-2">Message</label>
+              <textarea 
+                rows={5}
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 outline-none transition-all resize-none"
+                placeholder="How can we help you?"
+              ></textarea>
+            </div>
+            <button 
+              type="submit"
+              className="w-full inline-flex items-center justify-center gap-2 rounded-xl bg-yellow-500 hover:bg-yellow-400 px-6 py-4 font-semibold text-black transition-all shadow-lg shadow-yellow-500/25"
+            >
+              Send Message
+              <Send className="w-4 h-4" />
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 sm:py-28">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-yellow-500/10 rounded-full blur-3xl" />
+        </div>
+        
+        <div className="relative mx-auto max-w-4xl px-6 text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to start trading?
+          </h2>
+          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+            Open an account in minutes and join thousands of traders worldwide
+          </p>
+          <Link
+            href="/register"
+            className="inline-flex items-center gap-2 rounded-xl bg-yellow-500 hover:bg-yellow-400 px-8 py-4 text-lg font-bold text-black transition-all shadow-lg shadow-yellow-500/25 hover:scale-105"
+          >
+            Open an Account
+            <ChevronRight className="w-5 h-5" />
+          </Link>
         </div>
       </section>
     </main>

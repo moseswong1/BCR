@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card"
-import { TrendingUp, Users, DollarSign, Headphones, Shield } from "lucide-react"
+import { TrendingUp, Users, DollarSign, Headphones, BarChart3 } from "lucide-react"
 
 export function TradingSection() {
   const stats = [
@@ -10,10 +10,10 @@ export function TradingSection() {
       description: "Global CFDs available"
     },
     {
-      icon: Shield,
+      icon: BarChart3,
       number: "30:1",
-      label: "FlexibleLeverage",
-      description: "Regulated trading"
+      label: "Flexible Leverage",
+      description: "Multiple options"
     },
     {
       icon: DollarSign,

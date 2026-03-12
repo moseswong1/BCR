@@ -19,11 +19,11 @@ export function Header() {
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-4">
             <Link href="/pro" className="hover:text-yellow-400">PRO</Link>
-            <Link href="/careers" className="hover:text-yellow-400">Careers</Link>
-            <Link href="/partners" className="hover:text-yellow-400">Partners</Link>
+            <a href="https://www.seek.com.au/companies/bcr-bacera-co-164393999744024" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">Careers</a>
+            <Link href="/demo" className="hover:text-yellow-400">Demo Account</Link>
           </div>
           <div className="flex items-center space-x-4">
-            <Link href="/support" className="hover:text-yellow-400">Help and support</Link>
+            <Link href="/contact" className="hover:text-yellow-400">Support</Link>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center space-x-1 hover:text-yellow-400">
                 <Globe className="h-4 w-4" />
@@ -132,45 +132,39 @@ export function Header() {
                 </div>
               </div>
 
-              {/* Market Analysis */}
+              {/* Resources */}
               <div className="relative group">
                 <button className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
-                  Market Analysis
+                  Resources
                 </button>
                 <div className="absolute top-full left-0 mt-1 w-96 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="p-4 grid gap-3">
-                    <Link href="/market-analysis/navigating-markets" className="block p-3 hover:bg-gray-50 rounded">
-                      <div className="font-medium">Market Intelligence</div>
-                      <div className="text-sm text-gray-600">Strategic research and in-depth analysis</div>
+                    <Link href="/market-analysis" className="block p-3 hover:bg-gray-50 rounded">
+                      <div className="font-medium">Market Analysis</div>
+                      <div className="text-sm text-gray-600">Ahead of the trend - never miss opportunities</div>
                     </Link>
-                    <Link href="/market-analysis/the-daily-fix" className="block p-3 hover:bg-gray-50 rounded">
-                      <div className="font-medium">Daily Brief</div>
-                      <div className="text-sm text-gray-600">Your essential market snapshot</div>
+                    <Link href="/economic-calendar" className="block p-3 hover:bg-gray-50 rounded">
+                      <div className="font-medium">Economic Calendar</div>
+                      <div className="text-sm text-gray-600">Stay informed about market-moving events</div>
                     </Link>
                     <Link href="/market-analysis/meet-the-analysts" className="block p-3 hover:bg-gray-50 rounded">
-                      <div className="font-medium">Strategy Team</div>
+                      <div className="font-medium">Meet the Analysts</div>
                       <div className="text-sm text-gray-600">Expert perspectives and insights</div>
                     </Link>
-                    <div className="border-t border-gray-200 my-2 pt-2">
-                      <Link href="/economic-calendar" className="block p-3 hover:bg-gray-50 rounded">
-                        <div className="font-medium">Economic Calendar</div>
-                        <div className="text-sm text-gray-600">Stay informed about market-moving events</div>
-                      </Link>
-                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* About Us */}
+              {/* Company */}
               <div className="relative group">
                 <button className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
-                  About Us
+                  Company
                 </button>
                 <div className="absolute top-full left-0 mt-1 w-96 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="p-4 grid gap-3">
                     <Link href="/about" className="block p-3 hover:bg-gray-50 rounded">
-                      <div className="font-medium">About BCR</div>
-                      <div className="text-sm text-gray-600">BCR was born from the dream of making trading better</div>
+                      <div className="font-medium">Our Story</div>
+                      <div className="text-sm text-gray-600">Trade the world's markets with a trusted and regulated firm</div>
                     </Link>
                     <Link href="/contact" className="block p-3 hover:bg-gray-50 rounded">
                       <div className="font-medium">Contact Us</div>
@@ -190,19 +184,11 @@ export function Header() {
           {/* Action buttons */}
           <div className="hidden md:flex items-center space-x-3">
             <Button variant="ghost" asChild>
-              <Link href="/login">Login</Link>
-            </Button>
-
-            <Button
-              variant="outline"
-              className="border-2 border-yellow-500 text-yellow-600 hover:bg-yellow-500 hover:text-white font-semibold transition-all duration-200"
-              asChild
-            >
-              <Link href="/demo">Try Demo Account</Link>
+              <Link href="/login">Log in</Link>
             </Button>
 
             <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6" asChild>
-              <Link href="/register">Join now</Link>
+              <Link href="/register">Join Now</Link>
             </Button>
           </div>
 

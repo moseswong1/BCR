@@ -1,273 +1,223 @@
-export const metadata = { title: "About BCR - Transparent and Reliable CFDs Trading" };
+import Link from "next/link";
+import { TrendingUp, Monitor, BarChart3, Award, ChevronRight, Globe, Building, Users } from "lucide-react";
+
+export const metadata = { title: "BCR Profile" };
 
 export default function AboutPage() {
   return (
     <main className="bg-white text-slate-900">
       {/* HERO */}
-      <section className="relative overflow-hidden bg-[#070B0F]">
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-indigo-400 blur-3xl" />
-          <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-purple-400 blur-3xl" />
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 min-h-[400px]">
+        {/* Background effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-yellow-600/10 rounded-full blur-3xl" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:py-18">
+        <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28">
           <div className="max-w-3xl">
-            <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-white/90">
-              Our Company
-              <span className="h-1 w-1 rounded-full bg-indigo-400" />
-              18 Years of Excellence
-            </p>
-
-            <h1 className="mt-5 text-3xl font-semibold leading-tight text-white sm:text-5xl">
-              About BCR
+            <div className="inline-flex items-center gap-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400 mb-6">
+              <Globe className="w-4 h-4" />
+              Australian Regulated Broker
+            </div>
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+              BCR Profile
             </h1>
 
-            <p className="mt-4 text-base leading-7 text-white/80 sm:text-lg">
-              Trade the world's markets with a trusted and regulated firm. BCR is committed to delivering transparent and reliable trading services to our clients worldwide.
+            <p className="mt-6 text-xl sm:text-2xl text-slate-300 leading-relaxed max-w-2xl">
+              Trade The Worlds&apos; Markets With A Trusted And Regulated Firm
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-xl bg-[#FFD400] px-5 py-3 text-sm font-semibold text-black hover:brightness-95"
-              >
-                Get in Touch
-              </a>
-              <a
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
                 href="/register"
-                className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-xl bg-yellow-500 hover:bg-yellow-400 px-6 py-3 font-semibold text-black transition-all shadow-lg shadow-yellow-500/25 hover:shadow-yellow-400/30"
               >
-                Start Trading
-              </a>
+                Open an Account
+                <ChevronRight className="w-4 h-4" />
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 px-6 py-3 font-semibold text-white transition-all backdrop-blur-sm"
+              >
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent" />
+      </section>
+
+      {/* Sub-nav */}
+      <section className="border-b border-gray-200 bg-white sticky top-16 z-40">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex gap-8 overflow-x-auto py-4 text-sm font-semibold">
+            <span className="whitespace-nowrap text-yellow-600 border-b-2 border-yellow-500 pb-3 px-1">
+              BCR Profile
+            </span>
+            <Link
+              href="/contact"
+              className="whitespace-nowrap text-gray-500 hover:text-yellow-600 pb-3 px-1 transition-colors"
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="/disclosure-documents"
+              className="whitespace-nowrap text-gray-500 hover:text-yellow-600 pb-3 px-1 transition-colors"
+            >
+              Disclosure Documents
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* About BCR Section */}
+      <section className="py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-4">
+                <div className="w-8 h-[2px] bg-yellow-500" />
+                Our Story
+              </div>
+              <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">
+                About BCR
+              </h2>
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                BCR, founded in 2008, is a proudly Australian CFD trading provider headquartered in Sydney. With over 16 years of industry experience, BCR has built a strong reputation for delivering transparent and professional trading services across global financial markets.
+              </p>
+              <p className="text-lg text-slate-600 leading-relaxed">
+                Guided by the core values of integrity, innovation, and client success, BCR continues to evolve and grow as a trusted name in the financial services industry.
+              </p>
+            </div>
+
+            {/* Stats Grid */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 text-white">
+                <div className="text-4xl font-bold text-yellow-400 mb-2">2008</div>
+                <div className="text-sm text-slate-300">Founded in Sydney</div>
+              </div>
+              <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl p-6 text-black">
+                <div className="text-4xl font-bold mb-2">16+</div>
+                <div className="text-sm text-yellow-900">Years Experience</div>
+              </div>
+              <div className="bg-slate-100 rounded-2xl p-6">
+                <div className="text-4xl font-bold text-slate-900 mb-2">300+</div>
+                <div className="text-sm text-slate-600">Trading Instruments</div>
+              </div>
+              <div className="bg-slate-100 rounded-2xl p-6">
+                <div className="text-4xl font-bold text-slate-900 mb-2">24/5</div>
+                <div className="text-sm text-slate-600">Client Support</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CONTENT */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
-        <div className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-          Company / About
+      {/* Why Choose Us */}
+      <section className="py-20 sm:py-28 bg-gradient-to-b from-slate-50 to-white">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-4">
+              <div className="w-8 h-[2px] bg-yellow-500" />
+              Benefits
+              <div className="w-8 h-[2px] bg-yellow-500" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
+              Why Choose Us?
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {/* Card 1 */}
+            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:border-yellow-300 hover:shadow-xl hover:shadow-yellow-500/10 transition-all duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-14 h-14 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <TrendingUp className="w-7 h-7 text-yellow-600" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Raw Spread from 0.0</h3>
+              <p className="text-slate-600 text-sm">Ultra-competitive spreads for maximum trading efficiency</p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:border-yellow-300 hover:shadow-xl hover:shadow-yellow-500/10 transition-all duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-14 h-14 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Monitor className="w-7 h-7 text-yellow-600" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Trade On MT4/5</h3>
+              <p className="text-slate-600 text-sm">Access world-leading trading platforms</p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:border-yellow-300 hover:shadow-xl hover:shadow-yellow-500/10 transition-all duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-14 h-14 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <BarChart3 className="w-7 h-7 text-yellow-600" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Diverse CFD Markets</h3>
+              <p className="text-slate-600 text-sm">Trade on CFDs of forex, metals, commodities, shares, and indices</p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="group relative bg-white rounded-2xl p-8 shadow-sm border border-slate-200 hover:border-yellow-300 hover:shadow-xl hover:shadow-yellow-500/10 transition-all duration-300">
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-t-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+              <div className="w-14 h-14 bg-gradient-to-br from-yellow-100 to-yellow-50 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <Award className="w-7 h-7 text-yellow-600" />
+              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-2">Award Winning Broker</h3>
+              <p className="text-slate-600 text-sm">The Multi Award Winning Broker trusted globally</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div className="mt-8 space-y-12">
-          {/* Core Values */}
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900 mb-8">Boundless. Confident. Respected.</h2>
-            
-            <div className="space-y-8">
-              <div className="border-l-4 border-indigo-500 bg-indigo-50 rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Boundless</h3>
-                <p className="text-lg text-slate-700 leading-relaxed">
-                  Over the past 18 years, BCR has achieved many milestones in the derivatives trading industry. We are a global leader in online FX and CFD trading services. Our financial services have reached over 70 countries worldwide, serving a sizable clientele spanning different cultures and economic backgrounds. Our offices are located in seven countries across the globe. With our vast experience and support available in eight languages, BCR is the preferred choice for traders at every level.
-                </p>
-              </div>
-
-              <div className="border-l-4 border-purple-500 bg-purple-50 rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Confident</h3>
-                <p className="text-lg text-slate-700 leading-relaxed">
-                  We believe that every client has the potential to grow and prosper with BCR, and we strive to understand our clients' goals to provide the products and services they need, delivered on demand. We pride ourselves on providing our clients with a professional and fair experience. Our trading environment provides a trustworthy experience, by employing a strict No Re-Quote and No Order Rejection policy.
-                </p>
-              </div>
-
-              <div className="border-l-4 border-pink-500 bg-pink-50 rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Respected</h3>
-                <p className="text-lg text-slate-700 leading-relaxed">
-                  We hold highly regarded, globally-recognized financial services licenses in several jurisdictions, and we have consistently adhered to our regulatory obligations, ensuring the protection of our clients' interests and the security of their funds.
-                </p>
-              </div>
+      {/* Trust Indicators */}
+      <section className="py-16 border-t border-slate-200">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="grid sm:grid-cols-3 gap-8 text-center">
+            <div className="flex flex-col items-center">
+              <Building className="w-10 h-10 text-yellow-500 mb-4" />
+              <h3 className="font-bold text-slate-900 mb-1">Sydney Headquarters</h3>
+              <p className="text-sm text-slate-600">201 Elizabeth Street, NSW</p>
             </div>
-          </section>
-
-          {/* Key Stats */}
-          <section className="py-12">
-            <h2 className="text-3xl font-bold text-gray-950 mb-10">BCR by the Numbers</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-              {[
-                {
-                  stat: "2008",
-                  label: "AU Operations",
-                  description: "Established and operated in Australia.",
-                  eyebrow: "Operating since",
-                  isFeature: true
-                },
-                {
-                  stat: "70+",
-                  label: "Countries Served",
-                  description: "A truly global presence with diverse clientele"
-                },
-                {
-                  stat: "500+",
-                  label: "Trading Instruments",
-                  description: "Forex, metals, commodities, indices, and stocks"
-                },
-                {
-                  stat: "100K+",
-                  label: "Active Traders",
-                  description: "Trusted by traders from around the world"
-                },
-                {
-                  stat: "$30B",
-                  label: "Notional Monthly Trading Volume",
-                  description: "Average monthly processed trade value"
-                }
-              ].map((item, idx) => (
-                item.isFeature ? (
-                  <div key={idx} className="p-8 bg-gradient-to-br from-indigo-50 to-white border border-indigo-200 rounded-xl hover:shadow-lg transition-all duration-300 flex flex-col justify-center">
-                    <div className="space-y-4">
-                      <p className="text-xs font-semibold uppercase tracking-widest text-indigo-700">
-                        {item.eyebrow}
-                      </p>
-                      <div>
-                        <span className="text-6xl font-black text-indigo-600 leading-tight">{item.stat}</span>
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-bold text-gray-950 mb-2">{item.label}</h3>
-                        <p className="text-sm text-gray-700 leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  <div key={idx} className="p-8 bg-white border border-gray-200 rounded-xl hover:border-gray-300 hover:shadow-md transition-all duration-300 flex flex-col justify-center">
-                    <div className="space-y-4">
-                      <div>
-                        <span className="text-5xl font-black text-indigo-600">{item.stat}</span>
-                      </div>
-                      <div>
-                        <h3 className="text-base font-bold text-gray-950 mb-2">{item.label}</h3>
-                        <p className="text-sm text-gray-600 leading-relaxed">{item.description}</p>
-                      </div>
-                    </div>
-                  </div>
-                )
-              ))}
+            <div className="flex flex-col items-center">
+              <Users className="w-10 h-10 text-yellow-500 mb-4" />
+              <h3 className="font-bold text-slate-900 mb-1">Client Funds Protected</h3>
+              <p className="text-sm text-slate-600">Segregated client accounts</p>
             </div>
-          </section>
-
-          {/* Why Choose Us */}
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900 mb-8">Why Choose BCR?</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  title: "Multi Licensed",
-                  description: "BCR holds highly regarded, globally-recognized financial services licenses in several jurisdictions, ensuring regulatory compliance and client protection."
-                },
-                {
-                  title: "Raw Spreads from 0.0",
-                  description: "Trade with competitive, transparent pricing and raw spreads that give you the tightest execution available in the market."
-                },
-                {
-                  title: "Trade on MT4 & MT5",
-                  description: "Access world-leading trading platforms with advanced charting tools, automated trading, and comprehensive market analysis."
-                },
-                {
-                  title: "Diverse Asset Classes",
-                  description: "Trade CFDs on forex, metals, commodities, shares, and indices. With 500+ instruments, diversification is within reach."
-                },
-                {
-                  title: "Award-Winning Service",
-                  description: "Recognized for excellence in the trading industry. Our commitment to quality and innovation has earned multiple industry accolades."
-                },
-                {
-                  title: "No Re-Quote & No Rejection",
-                  description: "Experience fair dealing with our strict no re-quote and no order rejection policy. Transparent execution every time."
-                }
-              ].map((item, idx) => (
-                <div key={idx} className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
-                  <h3 className="text-lg font-semibold text-slate-900 mb-3">{item.title}</h3>
-                  <p className="text-slate-700">{item.description}</p>
-                </div>
-              ))}
+            <div className="flex flex-col items-center">
+              <Globe className="w-10 h-10 text-yellow-500 mb-4" />
+              <h3 className="font-bold text-slate-900 mb-1">Global Reach</h3>
+              <p className="text-sm text-slate-600">Serving traders worldwide</p>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          {/* Global Presence */}
-          <section className="bg-slate-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Global Presence</h2>
-            <p className="text-lg text-slate-700 mb-6">
-              With offices in 7 countries across the globe and support available in 8 languages, BCR is positioned to serve traders wherever they are.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  region: "Asia-Pacific",
-                  presence: "Primary trading hub serving the region with local support teams"
-                },
-                {
-                  region: "Europe",
-                  presence: "Multi-jurisdictional presence with regulated entities across key markets"
-                },
-                {
-                  region: "Middle East & Africa",
-                  presence: "Growing presence with dedicated support for emerging markets"
-                },
-                {
-                  region: "24/5 Support",
-                  presence: "Round-the-clock customer support available in multiple languages"
-                }
-              ].map((item, idx) => (
-                <div key={idx} className="flex gap-4">
-                  <div className="flex-shrink-0">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100">
-                      <div className="h-5 w-5 rounded-full bg-indigo-600" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-slate-900">{item.region}</h3>
-                    <p className="text-sm text-slate-600 mt-1">{item.presence}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          {/* Mission Statement */}
-          <section className="border-2 border-indigo-200 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">Our Mission</h2>
-            <p className="text-lg text-slate-700 leading-relaxed">
-              To empower traders worldwide by providing transparent, reliable, and innovative CFD trading solutions. We are committed to delivering world-class execution, competitive pricing, and exceptional customer service while maintaining the highest standards of regulatory compliance and client protection.
-            </p>
-          </section>
-
-          {/* Regulatory Information */}
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Regulatory Compliance</h2>
-            <div className="bg-white border border-slate-200 rounded-lg p-8">
-              <p className="text-slate-700 mb-6">
-                BCR Co Pty Ltd is regulated by multiple financial authorities, ensuring that we meet the highest standards of compliance and client protection:
-              </p>
-              <ul className="space-y-4">
-                {[
-                  "Licensed and regulated by the British Virgin Islands Financial Services Commission (License No. SIBA/L/19/1122)",
-                  "Company Registration Number in BVI: 1975046",
-                  "Registered Address: Trident Chambers, Wickham's Cay 1, Road Town, Tortola, British Virgin Islands",
-                  "Commitment to strict regulatory obligations ensuring protection of client interests and security of funds"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex gap-3">
-                    <span className="text-indigo-600 font-bold flex-shrink-0">✓</span>
-                    <span className="text-slate-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </section>
-
-          {/* Disclosure Documents */}
-          <section>
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Disclosure Documents</h2>
-            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-8">
-              <p className="text-slate-700 mb-6">
-                We believe in transparency. Access all our important legal, regulatory, and disclosure documents to fully understand our services and your obligations as a trader.
-              </p>
-              <a
-                href="/disclosure-documents"
-                className="inline-flex items-center justify-center rounded-lg bg-[#FFD400] px-6 py-3 font-semibold text-black hover:brightness-95 transition-all"
-              >
-                View Disclosure Documents
-              </a>
-            </div>
-          </section>
+      {/* CTA Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 sm:py-28">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-yellow-500/10 rounded-full blur-3xl" />
+        </div>
+        
+        <div className="relative mx-auto max-w-4xl px-6 text-center">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Explore more opportunities &amp; potential with BCR now
+          </h2>
+          <p className="text-xl text-slate-300 mb-10 max-w-2xl mx-auto">
+            Sign up in minutes and fund in seconds
+          </p>
+          <Link
+            href="/register"
+            className="inline-flex items-center gap-2 rounded-xl bg-yellow-500 hover:bg-yellow-400 px-8 py-4 text-lg font-bold text-black transition-all shadow-lg shadow-yellow-500/25 hover:shadow-yellow-400/30 hover:scale-105"
+          >
+            Open an Account
+            <ChevronRight className="w-5 h-5" />
+          </Link>
         </div>
       </section>
     </main>

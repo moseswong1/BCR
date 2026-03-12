@@ -241,16 +241,12 @@ export function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                Bridge the Global Market
+                MetaTrader 5 is now
                 <br />
-                <span className="text-black">with BCR</span>
+                <span className="text-black">at BCR</span>
               </h1>
               <p className="text-xl lg:text-2xl text-white/90 leading-relaxed">
-                Access global CFDs with 0.0+ spreads. Trade{" "}
-                <span className="font-bold">Forex</span>, <span className="font-bold">Crypto</span>,{" "}
-                <span className="font-bold">Metals</span>, <span className="font-bold">Commodities</span>,{" "}
-                <span className="font-bold">Indices</span>, and <span className="font-bold">Shares</span>{" "}
-                with local analysis and support.
+                A powerful platform with everything you need to bridge the Global Markets
               </p>
             </div>
 
@@ -261,18 +257,14 @@ export function HeroSection() {
               </Badge>
               <Badge variant="secondary" className="bg-white/20 text-white hover:bg-white/30 px-4 py-2 flex items-center gap-1">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                Algo Trading
-              </Badge>
-              <Badge variant="secondary" className="bg-white/20 text-white hover:bg-white/30 px-4 py-2 flex items-center gap-1">
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                No Requotes
+                300+ Global CFDs
               </Badge>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/register">
                 <Button size="lg" className="bg-black hover:bg-gray-800 text-white font-semibold px-8 py-4 text-lg 2xl:font-bold w-full sm:w-auto">
-                  Apply within minutes
+                  Join Now
                 </Button>
               </Link>
               <Link href="/demo">

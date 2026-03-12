@@ -5,7 +5,7 @@ import {
   Info,
   Percent,
   Scale,
-  Shield,
+  Layers,
   AlertTriangle,
 } from "lucide-react";
 
@@ -46,7 +46,7 @@ export default function MarginLeveragePage() {
             Margin &amp; Leverage
           </h1>
           <p className="mt-3 max-w-3xl text-lg text-white/80">
-            Understand margin requirements, leverage, hedging, and stop-out mechanics.
+            We use multiple liquidity providers from Tier 1 Banks and institutions to give you competitive quotes on a wide range of instruments.
           </p>
           <div className="mt-6 h-[2px] w-24 bg-white/70" />
         </div>
@@ -161,7 +161,7 @@ export default function MarginLeveragePage() {
               </Section>
 
               <Section
-                icon={<Shield className="h-5 w-5 text-amber-700" />}
+                icon={<Layers className="h-5 w-5 text-amber-700" />}
                 title="Hedging"
               >
                 <p>

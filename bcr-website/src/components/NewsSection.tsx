@@ -1,7 +1,5 @@
-import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Calendar, TrendingUp, ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { Calendar, TrendingUp, ArrowRight, ChevronRight, BarChart3, FileText } from "lucide-react"
 
 export function NewsSection() {
   const newsArticles = [
@@ -31,148 +29,138 @@ export function NewsSection() {
     }
   ]
 
+  const insights = [
+    {
+      icon: TrendingUp,
+      title: "Daily Market Outlook",
+      description: "Comprehensive analysis of major markets and opportunities"
+    },
+    {
+      icon: BarChart3,
+      title: "Technical Analysis",
+      description: "In-depth chart analysis and key levels to watch"
+    },
+    {
+      icon: FileText,
+      title: "Economic Calendar",
+      description: "Stay ahead of key economic events and releases"
+    }
+  ]
+
   return (
-    <section className="py-16 bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 sm:py-28 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/3 right-0 w-96 h-96 bg-yellow-500/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 left-0 w-96 h-96 bg-yellow-600/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-6">
         <div className="text-center space-y-6 mb-16">
-          <div className="space-y-2">
-            <p className="text-yellow-400 font-semibold uppercase tracking-wide">Marketing News & Analysis</p>
-            <h2 className="text-4xl font-bold">
-              Ahead of the <span className="text-yellow-400">Trend</span> - Never Miss
-              <br />
-              Opportunities
-            </h2>
+          <div className="inline-flex items-center gap-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 px-4 py-2 text-sm font-medium text-yellow-400">
+            Marketing News &amp; Analysis
           </div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Stay informed with our expert market analysis, economic insights, and trading opportunities
-            delivered by our professional research team.
-          </p>
+          
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
+            Ahead of the <span className="text-yellow-400">Trend</span> - Never Miss Opportunities
+          </h2>
         </div>
 
         {/* News grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-6 mb-16">
           {newsArticles.map((article, index) => (
-            <Card key={index} className="bg-gray-800 border-gray-700 overflow-hidden hover:shadow-xl transition-shadow">
-              <div className="aspect-video bg-gray-700 relative overflow-hidden">
+            <div 
+              key={index} 
+              className="group bg-slate-800/50 border border-slate-700 rounded-2xl overflow-hidden hover:border-yellow-500/30 hover:shadow-xl hover:shadow-yellow-500/5 transition-all duration-300 backdrop-blur-sm"
+            >
+              <div className="aspect-video bg-slate-700 relative overflow-hidden">
                 <img
                   src={article.image}
                   alt={article.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="bg-yellow-500 text-black px-2 py-1 rounded text-sm font-semibold">
+                  <span className="bg-yellow-500 text-black px-3 py-1 rounded-full text-xs font-bold">
                     {article.category}
                   </span>
                 </div>
               </div>
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-bold text-white leading-tight hover:text-yellow-400 cursor-pointer">
+                <h3 className="text-lg font-bold text-white leading-tight group-hover:text-yellow-400 transition-colors">
                   {article.title}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed line-clamp-2">
                   {article.excerpt}
                 </p>
                 <div className="flex items-center justify-between pt-2">
-                  <div className="flex items-center space-x-2 text-gray-500 text-sm">
+                  <div className="flex items-center gap-2 text-slate-500 text-sm">
                     <Calendar className="w-4 h-4" />
                     <span>{new Date(article.date).toLocaleDateString()}</span>
                   </div>
-                  <Link href={`/market-analysis/${article.id}`}>
-                    <Button variant="ghost" size="sm" className="text-yellow-400 hover:text-yellow-300 p-0">
-                      Read more <ArrowRight className="w-4 h-4 ml-1" />
-                    </Button>
+                  <Link 
+                    href={`/market-analysis/${article.id}`}
+                    className="inline-flex items-center gap-1 text-yellow-400 hover:text-yellow-300 text-sm font-semibold transition-colors"
+                  >
+                    Read more
+                    <ArrowRight className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
-            </Card>
+            </div>
           ))}
         </div>
 
         {/* Market insights section */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-3xl font-bold">
               Professional Market Analysis
             </h3>
-            <p className="text-gray-300 text-lg">
+            <p className="text-slate-300 text-lg leading-relaxed">
               Our team of experienced analysts provides daily market insights,
               technical analysis, and economic commentary to help you make informed trading decisions.
             </p>
+            
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <TrendingUp className="w-6 h-6 text-yellow-400 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-white">Daily Market Outlook</h4>
-                  <p className="text-gray-400">Comprehensive analysis of major markets and opportunities</p>
+              {insights.map((insight, index) => (
+                <div key={index} className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-yellow-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <insight.icon className="w-5 h-5 text-yellow-400" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white">{insight.title}</h4>
+                    <p className="text-slate-400 text-sm">{insight.description}</p>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <TrendingUp className="w-6 h-6 text-yellow-400 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-white">Economic Calendar</h4>
-                  <p className="text-gray-400">Key events and their potential market impact</p>
-                </div>
-              </div>
-              <div className="flex items-start space-x-3">
-                <TrendingUp className="w-6 h-6 text-yellow-400 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-white">Technical Analysis</h4>
-                  <p className="text-gray-400">Chart patterns and trading signals from our experts</p>
-                </div>
-              </div>
+              ))}
             </div>
-            <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
-              Access Market Analysis
-            </Button>
+            
+            <Link 
+              href="/market-analysis"
+              className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-black px-6 py-3 rounded-xl font-semibold transition-all shadow-lg shadow-yellow-500/25"
+            >
+              View All Analysis
+              <ChevronRight className="w-4 h-4" />
+            </Link>
           </div>
 
-          {/* Market data visualization */}
-          <div className="relative">
-            <Card className="bg-gray-800 border-gray-700 p-6">
-              <div className="space-y-4">
-                <div className="flex justify-between items-center">
-                  <h4 className="text-lg font-semibold text-white">Live Market Data</h4>
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+          <div className="bg-slate-800/50 border border-slate-700 rounded-2xl p-8 backdrop-blur-sm">
+            <h4 className="text-xl font-bold text-white mb-6">Latest Market Updates</h4>
+            <div className="space-y-4">
+              {[
+                { pair: "EUR/USD", change: "+0.23%", trend: "up" },
+                { pair: "GBP/USD", change: "-0.15%", trend: "down" },
+                { pair: "XAU/USD", change: "+0.82%", trend: "up" },
+                { pair: "US500", change: "+0.45%", trend: "up" },
+              ].map((item, idx) => (
+                <div key={idx} className="flex items-center justify-between py-3 border-b border-slate-700 last:border-0">
+                  <span className="font-semibold text-white">{item.pair}</span>
+                  <span className={`font-mono font-bold ${item.trend === 'up' ? 'text-green-400' : 'text-red-400'}`}>
+                    {item.change}
+                  </span>
                 </div>
-
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center p-3 bg-gray-700 rounded">
-                    <div>
-                      <div className="text-white font-semibold">EUR/USD</div>
-                      <div className="text-green-400 text-sm">+0.24%</div>
-                    </div>
-                    <div className="text-white font-mono">1.0924</div>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-700 rounded">
-                    <div>
-                      <div className="text-white font-semibold">GBP/USD</div>
-                      <div className="text-red-400 text-sm">-0.18%</div>
-                    </div>
-                    <div className="text-white font-mono">1.2643</div>
-                  </div>
-
-                  <div className="flex justify-between items-center p-3 bg-gray-700 rounded">
-                    <div>
-                      <div className="text-white font-semibold">XAU/USD</div>
-                      <div className="text-green-400 text-sm">+1.24%</div>
-                    </div>
-                    <div className="text-white font-mono">2,024.50</div>
-                  </div>
-                </div>
-
-                {/* Mini chart */}
-                <div className="h-20 bg-gray-900 rounded flex items-end justify-center space-x-1 p-2">
-                  {[...Array(15)].map((_, i) => (
-                    <div
-                      key={i}
-                      className="bg-yellow-500 w-2 rounded-t"
-                      style={{ height: `${Math.random() * 60 + 20}%` }}
-                    ></div>
-                  ))}
-                </div>
-              </div>
-            </Card>
+              ))}
+            </div>
           </div>
         </div>
       </div>

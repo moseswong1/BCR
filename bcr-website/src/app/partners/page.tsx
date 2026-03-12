@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, TrendingUp, DollarSign, Shield, Users, Zap } from "lucide-react";
+import { ArrowRight, TrendingUp, DollarSign, Award, Users, Zap } from "lucide-react";
 
 export const metadata = { title: "Partners" };
 
@@ -72,7 +72,7 @@ export default function PartnersPage() {
                 ))}
               </ul>
 
-              <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white">
+              <Button className="w-full bg-teal-600 hover:bg-teal-700 text-white inline-flex items-center justify-center">
                 Learn More About IB Program
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
@@ -106,11 +106,11 @@ export default function PartnersPage() {
 
             <Card className="p-6 border-gray-200 hover:shadow-lg transition">
               <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-emerald-100 mb-4">
-                <Shield className="w-6 h-6 text-emerald-600" />
+                <Award className="w-6 h-6 text-emerald-600" />
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Regulatory Excellence</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Industry Recognition</h3>
               <p className="text-gray-600 text-sm">
-                Regulated by 3 top-tier authorities with strict compliance standards.
+                Partner with an award-winning broker trusted by traders worldwide.
               </p>
             </Card>
 
@@ -165,7 +165,7 @@ export default function PartnersPage() {
           <p className="text-lg text-teal-100 mb-8 max-w-2xl mx-auto">
             Contact our partnerships team today to discuss how we can grow together.
           </p>
-          <Button className="bg-white text-teal-600 hover:bg-gray-100 font-semibold">
+          <Button className="bg-white text-teal-600 hover:bg-gray-100 font-semibold inline-flex items-center">
             Get in Touch
             <ArrowRight className="ml-2 w-4 h-4" />
           </Button>
