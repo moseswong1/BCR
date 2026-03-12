@@ -87,7 +87,7 @@ export default function AboutPage() {
                 About BCR
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-8">
-                BCR, founded in 2008, is a proudly Australian CFD trading provider headquartered in Sydney. With over 16 years of industry experience, BCR has built a strong reputation for delivering transparent and professional trading services to Australian traders.
+                BCR, founded in 2008, is a proudly Australian CFD trading provider headquartered in Sydney. With over 18 years of industry experience, BCR has built a strong reputation for delivering transparent and professional trading services to Australian traders.
               </p>
               <p className="text-lg text-slate-600 leading-relaxed">
                 Guided by the core values of integrity, innovation, and client success, BCR continues to evolve and grow as a trusted name in the financial services industry.
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 <div className="text-sm text-slate-300">Founded in Sydney</div>
               </div>
               <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl p-6 text-black">
-                <div className="text-4xl font-bold mb-2">16+</div>
+                <div className="text-4xl font-bold mb-2">18+</div>
                 <div className="text-sm text-yellow-900">Years Experience</div>
               </div>
               <div className="bg-slate-100 rounded-2xl p-6">

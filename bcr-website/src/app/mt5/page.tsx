@@ -35,7 +35,7 @@ export default function MT5Page() {
     { icon: Zap, title: "Super-tight spreads", description: "Enjoy our most competitive spreads starting from 0.0 pips on major forex pairs." },
     { icon: TrendingUp, title: "Fast execution", description: "Ultra-low latency trade execution ensures the best possible fills on your orders." },
     { icon: Headphones, title: "Dedicated support", description: "24/5 professional support team ready to assist with any trading queries." },
-    { icon: Award, title: "Established since 2008", description: "Trade with confidence knowing BCR is an experienced Australian broker with over 16 years in the industry." }
+    { icon: Award, title: "Established since 2008", description: "Trade with confidence knowing BCR is an experienced Australian broker with over 18 years in the industry." }
   ];
 
   const tradingMethods = [
