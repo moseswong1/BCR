@@ -90,7 +90,7 @@ export default function PartnersPage() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Track Record</h3>
               <p className="text-gray-600 text-sm">
-                Over 18 years serving Australian traders with consistent growth and reliability.
+                Almost 20 years serving Australian traders with consistent growth and reliability.
               </p>
             </Card>
 
