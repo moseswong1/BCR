@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo } from "react"
+import { useMemo, useState, useEffect } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -215,6 +215,46 @@ function TradingPreview() {
 }
 
 export function HeroSection() {
+  const headlines = [
+    {
+      line1: "Bridge the Global Market",
+      line2: "with BCR",
+      subtitle: "Access forex, indices, commodities and shares from one powerful trading account"
+    },
+    {
+      line1: "MetaTrader 5 is Now",
+      line2: "at BCR",
+      subtitle: "A powerful platform with everything you need to trade the global markets"
+    },
+    {
+      line1: "Trade 300+ CFDs",
+      line2: "with BCR",
+      subtitle: "Competitive spreads from 0.0 pips on major currency pairs"
+    },
+    {
+      line1: "Professional Trading",
+      line2: "Made Simple",
+      subtitle: "Advanced tools, real-time data, and 24/5 expert support"
+    },
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % headlines.length);
+        setIsAnimating(false);
+      }, 300);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [headlines.length]);
+
+  const currentHeadline = headlines[currentIndex];
+
   return (
     <section className="relative bg-gradient-to-r from-yellow-500 via-yellow-600 to-orange-500 text-white overflow-hidden">
       <div className="absolute inset-0 bg-black/20" />
@@ -240,14 +280,38 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                MetaTrader 5 is now
-                <br />
-                <span className="text-black">at BCR</span>
-              </h1>
-              <p className="text-xl lg:text-2xl text-white/90 leading-relaxed">
-                A powerful platform with everything you need to bridge the Global Markets
-              </p>
+              <div className={`transition-all duration-300 ${isAnimating ? 'opacity-0 translate-y-2' : 'opacity-100 translate-y-0'}`}>
+                <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+                  {currentHeadline.line1}
+                  <br />
+                  <span className="text-black">{currentHeadline.line2}</span>
+                </h1>
+                <p className="mt-4 text-xl lg:text-2xl text-white/90 leading-relaxed">
+                  {currentHeadline.subtitle}
+                </p>
+              </div>
+              
+              {/* Slide indicators */}
+              <div className="flex gap-2 pt-2">
+                {headlines.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => {
+                      setIsAnimating(true);
+                      setTimeout(() => {
+                        setCurrentIndex(idx);
+                        setIsAnimating(false);
+                      }, 300);
+                    }}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${
+                      idx === currentIndex 
+                        ? 'w-8 bg-white' 
+                        : 'w-3 bg-white/40 hover:bg-white/60'
+                    }`}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
 
             <div className="flex flex-wrap gap-4">
