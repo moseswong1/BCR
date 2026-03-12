@@ -101,7 +101,7 @@ export default function AboutPage() {
                 <div className="text-sm text-slate-300">Founded in Sydney</div>
               </div>
               <div className="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl p-6 text-black">
-                <div className="text-4xl font-bold mb-2">~20</div>
+                <div className="text-4xl font-bold mb-2">15+</div>
                 <div className="text-sm text-yellow-900">Years Experience</div>
               </div>
               <div className="bg-slate-100 rounded-2xl p-6">
