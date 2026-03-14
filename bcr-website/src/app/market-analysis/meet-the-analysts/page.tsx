@@ -1,6 +1,6 @@
-import Link from "next/link";
+"use client";
 
-export const metadata = { title: "Strategy Team - Market Analysis" };
+import Link from "next/link";
 
 export default function StrategyTeamPage() {
   return (
@@ -35,12 +35,12 @@ export default function StrategyTeamPage() {
               >
                 Meet the Team
               </a>
-              <a
+              <Link
                 href="/market-analysis"
                 className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
                 Back to Hub
-              </a>
+              </Link>
             </div>
           </div>
         </div>

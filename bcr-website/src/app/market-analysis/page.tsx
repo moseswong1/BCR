@@ -1,8 +1,9 @@
+"use client";
+
 import Link from "next/link";
+import { TrendingUp, Calendar, Users, BarChart3, Clock, Target, BookOpen, LineChart, Globe, Shield } from "lucide-react";
 
-export const metadata = { title: "Market Analysis" };
-
-export default function Page() {
+export default function MarketAnalysisPage() {
   return (
     <main className="bg-white text-slate-900">
       {/* HERO */}
@@ -12,7 +13,7 @@ export default function Page() {
           <div className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-emerald-400 blur-3xl" />
         </div>
 
-        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:py-18">
+        <div className="relative mx-auto max-w-6xl px-4 py-14 sm:py-20">
           <div className="max-w-3xl">
             <p className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-semibold tracking-wide text-white/90">
               Research & Insights
@@ -21,11 +22,12 @@ export default function Page() {
             </p>
 
             <h1 className="mt-5 text-3xl font-semibold leading-tight text-white sm:text-5xl">
-              Market Analysis
+              Market Analysis Hub
             </h1>
 
             <p className="mt-4 text-base leading-7 text-white/80 sm:text-lg">
-              Strategic insights, daily briefings, and expert perspectives on global markets
+              Strategic insights, daily briefings, and expert perspectives on global markets. 
+              Stay ahead with BCR's comprehensive research and analysis across forex, indices, commodities, and more.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -33,14 +35,30 @@ export default function Page() {
                 href="#sections"
                 className="inline-flex items-center justify-center rounded-xl bg-[#FFD400] px-5 py-3 text-sm font-semibold text-black hover:brightness-95"
               >
-                Explore Now
+                Explore Analysis
               </a>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
-                Learn More
+                Contact Our Team
               </Link>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
+              <div>
+                <div className="text-2xl font-bold text-white">Daily</div>
+                <div className="text-sm text-white/60">Market Updates</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white">8+</div>
+                <div className="text-sm text-white/60">Expert Analysts</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white">24/5</div>
+                <div className="text-sm text-white/60">Coverage</div>
+              </div>
             </div>
           </div>
         </div>
@@ -52,67 +70,228 @@ export default function Page() {
           Market Analysis Hub
         </div>
 
-        <div className="mt-8 space-y-8" id="sections">
-        {/* Main Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Section 1: Market Intelligence */}
-          <Link href="/market-analysis/navigating-markets" className="group block">
-            <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition border-l-4 border-blue-600">
-              <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 group-hover:bg-blue-200 transition">
-                <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
+        <div className="mt-8 space-y-12" id="sections">
+          {/* Main Sections - Enhanced Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Section 1: Market Intelligence */}
+            <Link href="/market-analysis/navigating-markets" className="group block">
+              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-blue-300 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <BarChart3 className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Market Intelligence</h3>
+                <p className="text-slate-600 mb-4">In-depth research and strategic analysis on global market trends, technical levels, and trading opportunities.</p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <TrendingUp className="w-4 h-4 text-blue-500" />
+                    <span>Trend Analysis & Technical Levels</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <Globe className="w-4 h-4 text-blue-500" />
+                    <span>Geopolitical Market Impact</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <Target className="w-4 h-4 text-blue-500" />
+                    <span>Thematic Trading Ideas</span>
+                  </div>
+                </div>
+                <span className="inline-flex items-center text-blue-600 font-semibold group-hover:gap-2 transition-all">
+                  Explore Research <span className="ml-1 group-hover:ml-2 transition-all">→</span>
+                </span>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Market Intelligence</h3>
-              <p className="text-slate-600">In-depth research and strategic analysis on market trends</p>
-            </div>
-          </Link>
+            </Link>
 
-          {/* Section 2: Daily Brief */}
-          <Link href="/market-analysis/the-daily-fix" className="group block">
-            <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition border-l-4 border-amber-600">
-              <div className="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mb-4 group-hover:bg-amber-200 transition">
-                <svg className="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+            {/* Section 2: Daily Brief */}
+            <Link href="/market-analysis/the-daily-fix" className="group block">
+              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-amber-300 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <Calendar className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Daily Brief</h3>
+                <p className="text-slate-600 mb-4">Your essential morning snapshot with overnight moves, economic releases, and high-probability trading setups.</p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <Clock className="w-4 h-4 text-amber-500" />
+                    <span>Overnight Market Recap</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <Calendar className="w-4 h-4 text-amber-500" />
+                    <span>Today's Economic Catalysts</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <LineChart className="w-4 h-4 text-amber-500" />
+                    <span>Actionable Trading Setups</span>
+                  </div>
+                </div>
+                <span className="inline-flex items-center text-amber-600 font-semibold group-hover:gap-2 transition-all">
+                  View Today's Brief <span className="ml-1 group-hover:ml-2 transition-all">→</span>
+                </span>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Daily Brief</h3>
-              <p className="text-slate-600">Essential morning updates and trading catalysts</p>
-            </div>
-          </Link>
+            </Link>
 
-          {/* Section 3: Strategy Team */}
-          <Link href="/market-analysis/meet-the-analysts" className="group block">
-            <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition border-l-4 border-purple-600">
-              <div className="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center mb-4 group-hover:bg-purple-200 transition">
-                <svg className="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.856-1.487M15 10a3 3 0 11-6 0 3 3 0 016 0zM4.5 20H9a4 4 0 014-4h5.5" />
-                </svg>
+            {/* Section 3: Strategy Team */}
+            <Link href="/market-analysis/meet-the-analysts" className="group block">
+              <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-200 hover:border-purple-300 h-full">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform">
+                  <Users className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">Strategy Team</h3>
+                <p className="text-slate-600 mb-4">Meet the expert analysts behind BCR's research—specialists across forex, equities, commodities, and emerging markets.</p>
+                <div className="space-y-2 mb-6">
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <Users className="w-4 h-4 text-purple-500" />
+                    <span>8 Dedicated Market Analysts</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <Shield className="w-4 h-4 text-purple-500" />
+                    <span>25+ Years Combined Experience</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-slate-500">
+                    <BookOpen className="w-4 h-4 text-purple-500" />
+                    <span>Live Trading Workshops</span>
+                  </div>
+                </div>
+                <span className="inline-flex items-center text-purple-600 font-semibold group-hover:gap-2 transition-all">
+                  Meet the Team <span className="ml-1 group-hover:ml-2 transition-all">→</span>
+                </span>
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Strategy Team</h3>
-              <p className="text-slate-600">Expert perspectives from our market specialists</p>
-            </div>
-          </Link>
-        </div>
+            </Link>
+          </div>
 
-        {/* Description */}
-        <div className="bg-slate-50 rounded-lg p-6 border border-slate-200">
-          <h2 className="text-xl font-semibold text-slate-900 mb-3">What You'll Find Here</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-            <div>
-              <h4 className="font-semibold text-slate-900 mb-2">Market Intelligence</h4>
-              <p className="text-slate-600">Strategic breakdowns of market dynamics, trend analysis, and thematic opportunities across all asset classes.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-slate-900 mb-2">Daily Brief</h4>
-              <p className="text-slate-600">Your morning snapshot of overnight moves, key economic releases, and high-probability trading setups.</p>
-            </div>
-            <div>
-              <h4 className="font-semibold text-slate-900 mb-2">Strategy Team</h4>
-              <p className="text-slate-600">Meet the experts behind BCR's analysis—specialists across forex, equities, commodities, and emerging markets.</p>
+          {/* What You'll Find Section */}
+          <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-2xl p-8 border border-slate-200">
+            <h2 className="text-2xl font-bold text-slate-900 mb-6">What You'll Find in Our Analysis</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-blue-100 flex items-center justify-center">
+                    <BarChart3 className="w-5 h-5 text-blue-600" />
+                  </div>
+                  <h4 className="font-semibold text-slate-900">Market Intelligence</h4>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  Strategic breakdowns of market dynamics, trend analysis, and thematic opportunities across all asset classes. Our research identifies momentum shifts, key technical levels, and geopolitical impacts before they become consensus.
+                </p>
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center">
+                    <Calendar className="w-5 h-5 text-amber-600" />
+                  </div>
+                  <h4 className="font-semibold text-slate-900">Daily Brief</h4>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  Your morning snapshot of overnight market moves, key economic releases, and high-probability trading setups. Start each session informed with clear entry levels, risk parameters, and intraday catalysts to watch.
+                </p>
+              </div>
+              <div>
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-xl bg-purple-100 flex items-center justify-center">
+                    <Users className="w-5 h-5 text-purple-600" />
+                  </div>
+                  <h4 className="font-semibold text-slate-900">Strategy Team</h4>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">
+                  Meet the experts behind BCR's analysis—specialists across forex, equities, commodities, and emerging markets. Learn their methodologies, access live workshops, and benefit from decades of combined experience.
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+
+          {/* Latest Insights Preview */}
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <h2 className="text-2xl font-bold text-slate-900">Latest Insights</h2>
+              <Link href="/market-analysis/navigating-markets" className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                View All →
+              </Link>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  category: "Forex",
+                  title: "USD Strength Continues Amid Rising Inflation Expectations",
+                  excerpt: "The dollar extends gains on stronger-than-expected data. Key levels to watch for EUR/USD and GBP/USD.",
+                  date: "Today",
+                  color: "blue"
+                },
+                {
+                  category: "Equities",
+                  title: "Tech Sector Shows Resilience Despite Market Headwinds",
+                  excerpt: "Large-cap tech stocks outperform broader indices. Analysis on sector momentum and upcoming earnings.",
+                  date: "Yesterday",
+                  color: "emerald"
+                },
+                {
+                  category: "Commodities",
+                  title: "Gold Rallies on Safe-Haven Demand",
+                  excerpt: "Precious metals surge amid geopolitical tensions. Expert view on longer-term trends and key resistance.",
+                  date: "2 days ago",
+                  color: "amber"
+                },
+                {
+                  category: "Indices",
+                  title: "S&P 500 Tests All-Time Highs",
+                  excerpt: "US markets approach record territory. Technical analysis of key support and resistance zones.",
+                  date: "3 days ago",
+                  color: "purple"
+                }
+              ].map((article, idx) => (
+                <article key={idx} className="bg-white rounded-xl p-6 border border-slate-200 hover:shadow-md transition">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className={`text-xs font-semibold text-white bg-${article.color}-600 px-3 py-1 rounded-full`}>
+                      {article.category}
+                    </span>
+                    <span className="text-xs text-slate-500">{article.date}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-slate-900 mb-2">{article.title}</h3>
+                  <p className="text-slate-600 text-sm">{article.excerpt}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <Link href="/economic-calendar" className="bg-slate-50 rounded-xl p-5 text-center hover:bg-slate-100 transition border border-slate-200">
+              <Calendar className="w-8 h-8 text-slate-600 mx-auto mb-3" />
+              <div className="font-semibold text-slate-900 text-sm">Economic Calendar</div>
+              <div className="text-xs text-slate-500 mt-1">Track key releases</div>
+            </Link>
+            <Link href="/mt5" className="bg-slate-50 rounded-xl p-5 text-center hover:bg-slate-100 transition border border-slate-200">
+              <LineChart className="w-8 h-8 text-slate-600 mx-auto mb-3" />
+              <div className="font-semibold text-slate-900 text-sm">Trading Platforms</div>
+              <div className="text-xs text-slate-500 mt-1">MT4 & MT5</div>
+            </Link>
+            <Link href="/spreads-commission-swap" className="bg-slate-50 rounded-xl p-5 text-center hover:bg-slate-100 transition border border-slate-200">
+              <TrendingUp className="w-8 h-8 text-slate-600 mx-auto mb-3" />
+              <div className="font-semibold text-slate-900 text-sm">Trading Conditions</div>
+              <div className="text-xs text-slate-500 mt-1">Spreads & Fees</div>
+            </Link>
+            <Link href="/contact" className="bg-slate-50 rounded-xl p-5 text-center hover:bg-slate-100 transition border border-slate-200">
+              <Users className="w-8 h-8 text-slate-600 mx-auto mb-3" />
+              <div className="font-semibold text-slate-900 text-sm">Contact Analysts</div>
+              <div className="text-xs text-slate-500 mt-1">Get in touch</div>
+            </Link>
+          </div>
+
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 md:p-10 text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Start Trading with Expert Insights
+            </h2>
+            <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+              Open an account today and get access to BCR's comprehensive market analysis, daily briefings, and expert trading insights.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/register" className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-xl hover:bg-blue-50 transition shadow-lg">
+                Open Live Account
+              </Link>
+              <Link href="/demo" className="border-2 border-white text-white font-semibold py-3 px-8 rounded-xl hover:bg-white/10 transition">
+                Try Demo Account
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
     </main>

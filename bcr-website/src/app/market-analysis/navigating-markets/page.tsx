@@ -1,4 +1,6 @@
-export const metadata = { title: "Market Intelligence - Market Analysis" };
+"use client";
+
+import Link from "next/link";
 
 export default function MarketIntelligencePage() {
   return (
@@ -33,12 +35,12 @@ export default function MarketIntelligencePage() {
               >
                 Explore Research
               </a>
-              <a
+              <Link
                 href="/market-analysis"
                 className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
                 Back to Hub
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -135,29 +137,45 @@ export default function MarketIntelligencePage() {
                 link: "/economic-calendar"
               },
               {
-                title: "Market News",
-                description: "Real-time market updates and breaking news alerts",
-                link: "/news"
+                title: "Trading Platforms",
+                description: "Access our suite of powerful trading platforms for execution",
+                link: "/mt5"
               },
               {
-                title: "Trading Ideas",
-                description: "Actionable trade setups with clear entry, exit and risk management levels",
-                link: "/trading-ideas"
+                title: "Market Analysis Hub",
+                description: "Explore all our analysis, daily briefs, and strategy insights",
+                link: "/market-analysis"
               },
               {
-                title: "Technical Analysis",
-                description: "Chart analysis and technical indicator insights for various markets",
-                link: "/technical-analysis"
+                title: "Contact Our Team",
+                description: "Get in touch with our analysts for personalized insights",
+                link: "/contact"
               }
             ].map((tool, idx) => (
-              <div key={idx} className="bg-slate-50 rounded-lg p-6 hover:shadow-md transition">
+              <Link key={idx} href={tool.link} className="block bg-slate-50 rounded-lg p-6 hover:shadow-md transition">
                 <h3 className="font-semibold text-slate-900 mb-2">{tool.title}</h3>
                 <p className="text-slate-600 text-sm mb-4">{tool.description}</p>
-                <a href={tool.link} className="text-blue-600 hover:text-blue-700 font-medium text-sm">
+                <span className="text-blue-600 hover:text-blue-700 font-medium text-sm">
                   Explore →
-                </a>
-              </div>
+                </span>
+              </Link>
             ))}
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Start Trading with BCR</h2>
+          <p className="text-lg mb-6 text-blue-100">
+            Access our market intelligence and execute trades with competitive spreads
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/register" className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-blue-50 transition">
+              Open an Account
+            </Link>
+            <Link href="/demo" className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 transition">
+              Try Demo
+            </Link>
           </div>
         </section>
       </div>

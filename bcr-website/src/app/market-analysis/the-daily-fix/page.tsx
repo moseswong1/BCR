@@ -1,4 +1,6 @@
-export const metadata = { title: "Daily Brief - Market Analysis" };
+"use client";
+
+import Link from "next/link";
 
 export default function DailyBriefPage() {
   return (
@@ -33,12 +35,12 @@ export default function DailyBriefPage() {
               >
                 View Today's Summary
               </a>
-              <a
+              <Link
                 href="/market-analysis"
                 className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
                 Back to Hub
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -101,7 +103,9 @@ export default function DailyBriefPage() {
                   <div key={idx} className="bg-slate-50 rounded p-4">
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-semibold text-slate-900">{fx.pair}</span>
-                      <span className="text-green-600 font-medium">{fx.change}</span>
+                      <span className={fx.change.startsWith("+") ? "text-green-600 font-medium" : "text-red-600 font-medium"}>
+                        {fx.change}
+                      </span>
                     </div>
                     <div className="text-sm text-slate-600 mb-2">Level: {fx.level}</div>
                     <div className="text-xs text-slate-500 bg-white rounded p-2">{fx.outlook}</div>
@@ -213,6 +217,27 @@ export default function DailyBriefPage() {
                 </span>
               </div>
             ))}
+          </div>
+          <div className="mt-6">
+            <Link href="/economic-calendar" className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium">
+              View Full Economic Calendar →
+            </Link>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-lg p-8 text-center">
+          <h2 className="text-2xl font-bold mb-4">Never Miss a Market Move</h2>
+          <p className="text-lg mb-6 text-amber-100">
+            Get daily briefings delivered to your inbox and stay ahead of the markets
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/register" className="bg-white text-amber-600 font-semibold py-3 px-8 rounded-lg hover:bg-amber-50 transition">
+              Open an Account
+            </Link>
+            <Link href="/contact" className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-amber-600 transition">
+              Contact Us
+            </Link>
           </div>
         </section>
       </div>
