@@ -122,11 +122,13 @@ export default function DemoPage() {
                   </Link>
                 </Button>
                 <Button 
-                  variant="outline" 
-                  className="h-14 px-8 border-2 border-white/20 bg-white/5 text-white hover:bg-white/10 font-semibold text-lg rounded-xl transition-all backdrop-blur-sm"
+                  className="h-14 px-8 bg-white hover:bg-slate-100 text-slate-900 font-semibold text-lg rounded-xl shadow-lg transition-all hover:scale-105"
                   asChild
                 >
-                  <Link href="/register">Open Live Account</Link>
+                  <Link href="/register" className="inline-flex items-center">
+                    Open Live Account
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
                 </Button>
               </div>
 

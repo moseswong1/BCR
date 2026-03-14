@@ -42,8 +42,8 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-yellow-400 font-semibold text-lg">Trading</h3>
             <div className="space-y-3">
-              <a href="/register" className="block text-gray-300 hover:text-white">Open a Live Account</a>
-              <a href="/demo" className="block text-gray-300 hover:text-white">Open a Demo Account</a>
+              <Link href="/register" className="block text-gray-300 hover:text-white">Open a Live Account</Link>
+              <Link href="/demo" className="block text-gray-300 hover:text-white">Open a Demo Account</Link>
             </div>
           </div>
 
@@ -51,11 +51,11 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-yellow-400 font-semibold text-lg">Trading Specification</h3>
             <div className="space-y-3">
-              <a href="/account-overview" className="block text-gray-300 hover:text-white">Account Overview</a>
-              <a href="/spreads-commission-swap" className="block text-gray-300 hover:text-white">Spreads, Commission & Swap</a>
-              <a href="/margin-leverage" className="block text-gray-300 hover:text-white">Margin & Leverage</a>
-              <a href="/trading-hours" className="block text-gray-300 hover:text-white">Trading Hours</a>
-              <a href="/deposit-withdrawal" className="block text-gray-300 hover:text-white">Deposit & Withdrawal</a>
+              <Link href="/account-overview" className="block text-gray-300 hover:text-white">Account Overview</Link>
+              <Link href="/spreads-commission-swap" className="block text-gray-300 hover:text-white">Spreads, Commission & Swap</Link>
+              <Link href="/margin-leverage" className="block text-gray-300 hover:text-white">Margin & Leverage</Link>
+              <Link href="/trading-hours" className="block text-gray-300 hover:text-white">Trading Hours</Link>
+              <Link href="/deposit-withdrawal" className="block text-gray-300 hover:text-white">Deposit & Withdrawal</Link>
             </div>
           </div>
 
@@ -66,8 +66,8 @@ export function Footer() {
               <div className="space-y-3">
                 <a href="https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Public-Complaints-Policy.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white">Complaints Handling Policy</a>
                 <a href="https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Terms-and-Conditions.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white">Terms & Conditions</a>
-                <a href="/rg227" className="block text-gray-300 hover:text-white">RG227</a>
-                <a href="/risk-disclosure-addendum" className="block text-gray-300 hover:text-white">Risk Disclosure Addendum</a>
+                <Link href="/rg227" className="block text-gray-300 hover:text-white">RG227</Link>
+                <Link href="/risk-disclosure-addendum" className="block text-gray-300 hover:text-white">Risk Disclosure Addendum</Link>
                 <a href="https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Target-Market-Determination.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white">Target Market Determination</a>
               </div>
             </div>
@@ -75,8 +75,8 @@ export function Footer() {
             <div className="space-y-4">
               <h3 className="text-yellow-400 font-semibold text-lg">About</h3>
               <div className="space-y-3">
-                <a href="/about" className="block text-gray-300 hover:text-white">Our Story</a>
-                <a href="/contact" className="block text-gray-300 hover:text-white">Contact Us</a>
+                <Link href="/about" className="block text-gray-300 hover:text-white">Our Story</Link>
+                <Link href="/contact" className="block text-gray-300 hover:text-white">Contact Us</Link>
                 <a href="https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Terms-and-Conditions.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white">Terms & Conditions</a>
                 <a href="https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Privacy-Policy.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white">Privacy Policy</a>
               </div>

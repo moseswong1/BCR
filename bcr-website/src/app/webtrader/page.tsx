@@ -136,11 +136,13 @@ export default function WebTraderPage() {
                   </Link>
                 </Button>
                 <Button 
-                  variant="outline" 
-                  className="h-14 px-8 border-2 border-slate-600 text-white hover:bg-slate-800 font-semibold text-lg rounded-xl transition-all"
+                  className="h-14 px-8 bg-white hover:bg-slate-100 text-slate-900 font-semibold text-lg rounded-xl shadow-lg transition-all hover:scale-105"
                   asChild
                 >
-                  <Link href="/demo">Try Free Demo</Link>
+                  <Link href="/demo" className="inline-flex items-center">
+                    Try Free Demo
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
                 </Button>
               </div>
 
@@ -439,11 +441,13 @@ export default function WebTraderPage() {
               </Link>
             </Button>
             <Button 
-              variant="outline" 
-              className="h-14 px-10 border-2 border-slate-600 text-white hover:bg-slate-800 font-semibold text-lg rounded-xl transition-all"
+              className="h-14 px-10 bg-white hover:bg-slate-100 text-slate-900 font-semibold text-lg rounded-xl shadow-lg transition-all hover:scale-105"
               asChild
             >
-              <Link href="/demo">Try Demo Account</Link>
+              <Link href="/demo" className="inline-flex items-center">
+                Try Demo Account
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
             </Button>
           </div>
         </div>
