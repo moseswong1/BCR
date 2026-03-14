@@ -233,11 +233,12 @@ export default function MT4Page() {
             </h2>
           </div>
           
-          <div className="grid sm:grid-cols-3 gap-6 mb-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {[
               { name: "Windows", icon: Monitor },
               { name: "Mac", icon: Monitor },
-              { name: "Mobile", icon: Smartphone }
+              { name: "iOS", icon: Smartphone },
+              { name: "Android", icon: Smartphone }
             ].map((item) => (
               <button 
                 key={item.name} 
