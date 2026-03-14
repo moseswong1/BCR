@@ -76,7 +76,7 @@ export function MarketsSection() {
           </p>
           
           <Link 
-            href="/range-of-markets" 
+            href="/markets" 
             className="inline-flex items-center gap-2 text-yellow-400 font-semibold hover:text-yellow-300 transition-colors"
           >
             Explore More

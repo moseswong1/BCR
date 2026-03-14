@@ -84,11 +84,15 @@ export function Header() {
 
               {/* Markets */}
               <div className="relative group">
-                <button className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+                <Link href="/markets" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
                   Markets
-                </button>
+                </Link>
                 <div className="absolute top-full left-0 mt-1 w-96 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                   <div className="p-4 grid gap-3">
+                    <Link href="/markets" className="block p-3 hover:bg-yellow-50 rounded border-b border-gray-100 mb-2">
+                      <div className="font-medium text-yellow-600">Range of Markets</div>
+                      <div className="text-sm text-gray-600">Explore all trading instruments available at BCR</div>
+                    </Link>
                     <Link href="/markets/forex" className="block p-3 hover:bg-gray-50 rounded">
                       <div className="font-medium">Forex CFDs</div>
                       <div className="text-sm text-gray-600">Trade major currency pairs with tight spreads</div>
