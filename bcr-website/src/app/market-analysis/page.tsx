@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = { title: "Market Analysis" };
 
 export default function Page() {
@@ -33,12 +35,12 @@ export default function Page() {
               >
                 Explore Now
               </a>
-              <a
+              <Link
                 href="/contact"
                 className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
               >
                 Learn More
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -54,7 +56,7 @@ export default function Page() {
         {/* Main Sections */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* Section 1: Market Intelligence */}
-          <a href="/market-analysis/navigating-markets" className="group block">
+          <Link href="/market-analysis/navigating-markets" className="group block">
             <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition border-l-4 border-blue-600">
               <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center mb-4 group-hover:bg-blue-200 transition">
                 <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,10 +66,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Market Intelligence</h3>
               <p className="text-slate-600">In-depth research and strategic analysis on market trends</p>
             </div>
-          </a>
+          </Link>
 
           {/* Section 2: Daily Brief */}
-          <a href="/market-analysis/the-daily-fix" className="group block">
+          <Link href="/market-analysis/the-daily-fix" className="group block">
             <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition border-l-4 border-amber-600">
               <div className="w-14 h-14 rounded-full bg-amber-100 flex items-center justify-center mb-4 group-hover:bg-amber-200 transition">
                 <svg className="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -77,10 +79,10 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Daily Brief</h3>
               <p className="text-slate-600">Essential morning updates and trading catalysts</p>
             </div>
-          </a>
+          </Link>
 
           {/* Section 3: Strategy Team */}
-          <a href="/market-analysis/meet-the-analysts" className="group block">
+          <Link href="/market-analysis/meet-the-analysts" className="group block">
             <div className="bg-white rounded-lg p-8 shadow-sm hover:shadow-lg transition border-l-4 border-purple-600">
               <div className="w-14 h-14 rounded-full bg-purple-100 flex items-center justify-center mb-4 group-hover:bg-purple-200 transition">
                 <svg className="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +92,7 @@ export default function Page() {
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Strategy Team</h3>
               <p className="text-slate-600">Expert perspectives from our market specialists</p>
             </div>
-          </a>
+          </Link>
         </div>
 
         {/* Description */}
