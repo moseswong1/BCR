@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = { title: "Strategy Team - Market Analysis" };
 
 export default function StrategyTeamPage() {
@@ -197,12 +199,12 @@ export default function StrategyTeamPage() {
               Unlock daily insights, join interactive sessions, and get a direct feed of market opportunities
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-blue-50 transition">
+              <Link href="/market-analysis" className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-blue-50 transition">
                 Follow Our Analysis
-              </button>
-              <button className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 transition">
+              </Link>
+              <Link href="/contact" className="border-2 border-white text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 transition">
                 Schedule a Consultation
-              </button>
+              </Link>
             </div>
           </div>
         </section>
