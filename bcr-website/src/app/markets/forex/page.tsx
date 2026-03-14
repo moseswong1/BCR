@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 interface ForexPair {
   symbol: string;
@@ -231,9 +232,9 @@ export default function ForexPage() {
 
           <p className="text-sm text-slate-600 mt-4">
             You can find the full list of our forex pairs and spreads{' '}
-            <a href="#" className="text-blue-600 hover:underline font-semibold">
+            <Link href="/pricing#competitive-pricing" className="text-blue-600 hover:underline font-semibold">
               here
-            </a>
+            </Link>
           </p>
         </div>
       </section>

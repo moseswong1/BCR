@@ -213,7 +213,7 @@ export default function SpreadsCommissionSwapPage() {
       </section>
 
       {/* Spreads Table */}
-      <section className="py-20 sm:py-28 bg-gradient-to-b from-slate-50 to-white">
+      <section id="competitive-pricing" className="py-20 sm:py-28 bg-gradient-to-b from-slate-50 to-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 text-yellow-600 font-semibold text-sm uppercase tracking-wider mb-4">
