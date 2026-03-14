@@ -130,17 +130,17 @@ export default function WebTraderPage() {
                   className="h-14 px-8 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-slate-900 font-semibold text-lg rounded-xl shadow-lg shadow-yellow-500/25 hover:shadow-yellow-500/40 transition-all hover:scale-105"
                   asChild
                 >
-                  <Link href="/register" className="inline-flex items-center">
-                    Start Trading Now
+                  <a href="https://webtrading.thebcr.com/terminal?lang=en&server=BCR-MT5" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                    Launch MT5 WebTrader
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </Link>
+                  </a>
                 </Button>
                 <Button 
                   className="h-14 px-8 bg-white hover:bg-slate-100 text-slate-900 font-semibold text-lg rounded-xl shadow-lg transition-all hover:scale-105"
                   asChild
                 >
-                  <Link href="/demo" className="inline-flex items-center">
-                    Try Free Demo
+                  <Link href="/mt5" className="inline-flex items-center">
+                    Learn About MT5
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 </Button>
@@ -175,7 +175,7 @@ export default function WebTraderPage() {
                   </div>
                   <div className="flex-1 flex items-center justify-center">
                     <div className="px-4 py-1 rounded bg-slate-700/50 text-xs text-slate-400">
-                      webtrader.thebcr.com
+                      webtrading.thebcr.com
                     </div>
                   </div>
                 </div>
@@ -435,17 +435,17 @@ export default function WebTraderPage() {
               className="h-14 px-10 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-slate-900 font-semibold text-lg rounded-xl shadow-lg shadow-yellow-500/25 hover:shadow-yellow-500/40 transition-all hover:scale-105"
               asChild
             >
-              <Link href="/register" className="inline-flex items-center">
-                Open Live Account
+              <a href="https://webtrading.thebcr.com/terminal?lang=en&server=BCR-MT5" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+                Launch MT5 WebTrader
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+              </a>
             </Button>
             <Button 
               className="h-14 px-10 bg-white hover:bg-slate-100 text-slate-900 font-semibold text-lg rounded-xl shadow-lg transition-all hover:scale-105"
               asChild
             >
-              <Link href="/demo" className="inline-flex items-center">
-                Try Demo Account
+              <Link href="/register" className="inline-flex items-center">
+                Open Live Account
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </Button>
