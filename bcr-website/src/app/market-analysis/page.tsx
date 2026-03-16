@@ -30,20 +30,6 @@ export default function MarketAnalysisPage() {
               Stay ahead with BCR's comprehensive research and analysis across forex, indices, commodities, and more.
             </p>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href="#sections"
-                className="inline-flex items-center justify-center rounded-xl bg-[#FFD400] px-5 py-3 text-sm font-semibold text-black hover:brightness-95"
-              >
-                Explore Analysis
-              </a>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10"
-              >
-                Contact Our Team
-              </Link>
-            </div>
 
             {/* Quick Stats */}
             <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
