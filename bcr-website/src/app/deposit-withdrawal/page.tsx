@@ -106,75 +106,75 @@ export default function DepositWithdrawalPage() {
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 sm:py-24">
-        {/* Background effects */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-green-500/10 rounded-full blur-3xl" />
-        </div>
-        <div className="absolute inset-0 opacity-[0.03] [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
-
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-6">
-            <CreditCard className="w-4 h-4 text-yellow-400" />
-            <span className="text-sm font-semibold text-yellow-400">Fast Transactions</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
-            Deposit &
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500"> Withdrawal</span>
-          </h1>
-          <p className="mt-6 text-xl text-slate-300 max-w-3xl mx-auto">
-            Multiple payment methods with zero fees. Fund your account quickly and withdraw your profits hassle-free.
-          </p>
-
-          {/* Quick stats */}
-          <div className="mt-12 flex flex-wrap justify-center gap-8">
-            {[
-              { icon: Wallet, label: "12+ Payment Methods" },
-              { icon: Clock, label: "Instant Processing" },
-              { icon: Zap, label: "Fast Withdrawals" },
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-center gap-3 text-slate-300">
-                <div className="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center">
-                  <item.icon className="w-5 h-5 text-yellow-400" />
-                </div>
-                <span className="text-sm font-medium">{item.label}</span>
+        return (
+          <main className="min-h-screen bg-white">
+            {/* Hero Section */}
+            <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 sm:py-24">
+              {/* Background effects */}
+              <div className="absolute inset-0">
+                <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-yellow-500/20 rounded-full blur-3xl" />
+                <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-green-500/10 rounded-full blur-3xl" />
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+              <div className="absolute inset-0 opacity-[0.03] [background-image:radial-gradient(#fff_1px,transparent_1px)] [background-size:24px_24px]" />
 
-      {/* Deposit Methods Section */}
-      <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-3 mb-4">
-              <div className="w-8 h-[2px] bg-yellow-500" />
-              <span className="text-xs font-semibold tracking-widest text-yellow-600 uppercase">Funding Options</span>
-              <div className="w-8 h-[2px] bg-yellow-500" />
-            </div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">
-              Flexible Deposit Methods
-            </h2>
-            <p className="mt-4 text-lg text-slate-600 max-w-2xl mx-auto">
-              Choose from multiple convenient payment options to fund your trading account
-            </p>
-          </div>
+              <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-6">
+                  <CreditCard className="w-4 h-4 text-yellow-400" />
+                  <span className="text-sm font-semibold text-yellow-400">Fast Transactions</span>
+                </div>
 
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {depositMethods.map((method) => (
-              <div
-                key={method.name}
-                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 transition-all duration-300 hover:border-yellow-300 hover:shadow-xl hover:shadow-yellow-500/10 hover:-translate-y-1"
-              >
-                {/* Hover gradient bar */}
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-400 opacity-0 group-hover:opacity-100 transition-opacity" />
-                
-                {/* Logo */}
-                <div className="flex items-center justify-center h-16 mb-6">
-                  <img
-                    src={method.img}
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                  Deposit &
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-500"> Withdrawal</span>
+                </h1>
+                <p className="mt-6 text-xl text-slate-300 max-w-3xl mx-auto">
+                  Multiple payment methods with zero fees. Fund your account quickly and withdraw your profits hassle-free.
+                </p>
+
+                {/* Quick stats */}
+                <div className="mt-12 flex flex-wrap justify-center gap-8">
+                  {[
+                    { icon: Wallet, label: `${depositMethods.length} Payment Methods` },
+                    { icon: Clock, label: "Instant Processing" },
+                    { icon: Zap, label: "Fast Withdrawals" },
+                  ].map((item, idx) => (
+                    <div key={idx} className="flex items-center gap-2">
+                      <item.icon className="w-5 h-5 text-yellow-400" />
+                      <span className="text-sm text-slate-200">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Deposit Methods Section */}
+            <section className="py-16">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <h2 className="text-3xl font-bold text-center mb-8">Flexible Account Deposit</h2>
+                <p className="text-lg text-center text-slate-600 mb-12">
+                  We understand that different clients have unique requirements when it comes to deposit options. At BCR, we offer multiple flexible deposit methods, allowing you to quickly deposit funds into your account across supported currencies.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                  {depositMethods.map((method, idx) => (
+                    <div key={idx} className="bg-white border border-slate-200 rounded-xl shadow-sm p-6 flex flex-col items-center">
+                      <img src={method.img} alt={method.name} className="h-12 mb-4" />
+                      <div className="text-xl font-semibold mb-2">{method.name}</div>
+                      <div className="mb-2 text-sm text-slate-500">
+                        <span className="font-medium">Time:</span> {method.processTime}
+                      </div>
+                      <div className="mb-4 text-sm text-slate-500">
+                        <span className="font-medium">Fees:</span> {method.fees}
+                      </div>
+                      <Button className="w-full mt-auto bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded">
+                        Deposit Now
+                      </Button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          </main>
+        );
                     alt={method.name}
                     className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-110"
                   />

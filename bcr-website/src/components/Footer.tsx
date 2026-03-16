@@ -43,12 +43,14 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Trading links */}
+          {/* About section moved to Trading section's place */}
           <div className="space-y-4">
-            <h3 className="text-yellow-400 font-semibold text-lg">{t.footer.tradingTitle}</h3>
+            <h3 className="text-yellow-400 font-semibold text-lg">{t.footer.aboutTitle}</h3>
             <div className="space-y-3">
-              <Link href="/register" className="block text-gray-300 hover:text-white">{t.footer.openLiveAccount}</Link>
-              <Link href="/demo" className="block text-gray-300 hover:text-white">{t.footer.openDemoAccount}</Link>
+              <Link href="/about" className="block text-gray-300 hover:text-white">{t.footer.ourStory}</Link>
+              <Link href="/contact" className="block text-gray-300 hover:text-white">{t.footer.contactUs}</Link>
+              <a href="https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Terms-and-Conditions.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white">{t.footer.termsConditions}</a>
+              <a href="https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Privacy-Policy.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white">{t.footer.privacyPolicy}</a>
             </div>
           </div>
 
@@ -77,15 +79,7 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="space-y-4">
-              <h3 className="text-yellow-400 font-semibold text-lg">{t.footer.aboutTitle}</h3>
-              <div className="space-y-3">
-                <Link href="/about" className="block text-gray-300 hover:text-white">{t.footer.ourStory}</Link>
-                <Link href="/contact" className="block text-gray-300 hover:text-white">{t.footer.contactUs}</Link>
-                <a href="https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Terms-and-Conditions.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white">{t.footer.termsConditions}</a>
-                <a href="https://bcrpropublic.s3.ap-southeast-1.amazonaws.com/docs/ba/en-us/BCR-Privacy-Policy.pdf" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-white">{t.footer.privacyPolicy}</a>
-              </div>
-            </div>
+            {/* About section removed from here, now above */}
           </div>
         </div>
       </div>
