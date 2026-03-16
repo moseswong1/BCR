@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="12" fill="url(#midas-gradient)"/>
+  <g filter="url(#glow)">
+    <path d="M24 12c6.627 0 12 5.373 12 12s-5.373 12-12 12-12-5.373-12-12 5.373-12 12-12zm0 2.5c-5.236 0-9.5 4.264-9.5 9.5s4.264 9.5 9.5 9.5 9.5-4.264 9.5-9.5-4.264-9.5-9.5-9.5z" fill="#00d2be"/>
+    <path d="M24 18a6 6 0 1 1 0 12 6 6 0 0 1 0-12z" fill="#0a3d5c"/>
+    <text x="24" y="28" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="10" font-weight="bold" fill="#fff" letter-spacing="2">MIDAS</text>
+  </g>
+  <defs>
+    <linearGradient id="midas-gradient" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00d2be"/>
+      <stop offset="1" stop-color="#0a3d5c"/>
+    </linearGradient>
+    <filter id="glow" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00d2be" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+</svg>

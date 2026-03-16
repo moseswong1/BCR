@@ -93,6 +93,12 @@ const depositMethods: PaymentMethod[] = [
     processTime: "Instant",
     fees: "$0",
   },
+  {
+    name: "PayPal",
+    img: "https://au.thebcr.com/statics/images/deposit-withdrawal/paypal.png",
+    processTime: "Instant",
+    fees: "$0",
+  },
 ];
 
 export default function DepositWithdrawalPage() {
