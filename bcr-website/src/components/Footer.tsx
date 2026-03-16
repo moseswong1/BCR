@@ -17,10 +17,14 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <div className="space-y-4">
               <div className="flex items-center space-x-4 mb-4">
-                <span className="text-yellow-400 font-semibold">{t.common.getStarted}?</span>
                 <Link href="/register">
                   <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold">
                     {t.footer.openLiveAccount}
+                  </Button>
+                </Link>
+                <Link href="/demo">
+                  <Button className="bg-transparent hover:bg-yellow-500 text-yellow-400 hover:text-black font-semibold border border-yellow-500">
+                    Open Demo Account
                   </Button>
                 </Link>
               </div>
