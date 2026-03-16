@@ -126,12 +126,14 @@ export default function LoginPage() {
                     </a>
                   </div>
 
-                  <Button 
-                    type="submit"
+                  <Button
                     className="w-full h-14 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-slate-900 font-semibold text-lg rounded-xl shadow-lg shadow-yellow-500/25 hover:shadow-yellow-500/40 transition-all hover:scale-[1.02] inline-flex items-center justify-center"
+                    asChild
                   >
-                    Sign In
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <a href="https://au.thebcr.com/portal/sign-in" target="_blank" rel="noopener noreferrer">
+                      Sign In
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </a>
                   </Button>
 
                   <div className="relative">
@@ -181,9 +183,9 @@ export default function LoginPage() {
               <div className="rounded-2xl bg-gradient-to-br from-slate-800 to-slate-900 p-8">
                 <h3 className="text-lg font-bold text-white mb-4">Quick Access</h3>
                 <div className="space-y-3">
-                  <a 
-                    href="https://my.thebcr.com" 
-                    target="_blank" 
+                  <a
+                    href="https://au.thebcr.com/portal/sign-in"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-between p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
                   >

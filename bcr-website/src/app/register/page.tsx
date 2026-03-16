@@ -217,12 +217,14 @@ export default function RegisterPage() {
                   </div>
 
                   {/* Submit */}
-                  <Button 
-                    type="submit"
+                  <Button
                     className="w-full h-14 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-slate-900 font-semibold text-lg rounded-xl shadow-lg shadow-yellow-500/25 hover:shadow-yellow-500/40 transition-all hover:scale-[1.02] inline-flex items-center justify-center"
+                    asChild
                   >
-                    Create Account
-                    <ArrowRight className="w-5 h-5 ml-2" />
+                    <a href="https://au.thebcr.com/portal/sign-up" target="_blank" rel="noopener noreferrer">
+                      Create Account
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </a>
                   </Button>
 
                   <p className="text-center text-slate-600">
