@@ -62,12 +62,12 @@ export default function StrategyTeamPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                stat: "25+",
-                label: "Years Combined Experience"
+                stat: "3",
+                label: "Dedicated Analysts"
               },
               {
-                stat: "8",
-                label: "Dedicated Analysts"
+                stat: "Global",
+                label: "Market Perspective"
               },
               {
                 stat: "24/5",
@@ -85,54 +85,36 @@ export default function StrategyTeamPage() {
         {/* Meet the Team */}
         <section>
           <h2 className="text-2xl font-bold text-slate-900 mb-8">The Experts Behind Your Insights</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: "James Richardson",
+                name: "Greg Matwejev",
                 title: "Chief Market Strategist",
-                focus: "Global Macro, Forex",
-                bio: "Leading our research function with 18 years of market experience. James identifies structural trends and inflection points that define multi-quarter moves in currencies and cross-asset correlations.",
-                expertise: ["Macro Analysis", "Forex Trading", "Risk Management"]
+                focus: "Global Macro, Cross-Asset Strategy",
+                bio: "Leading BCR's research function, Greg provides strategic oversight across all major asset classes. His expertise spans global macro themes, currency dynamics, and identifying key market inflection points that shape trading opportunities.",
+                expertise: ["Macro Strategy", "Forex Markets", "Cross-Asset Analysis"],
+                avatar: "https://api.dicebear.com/7.x/initials/svg?seed=GM&backgroundColor=1e3a5f&fontSize=40&fontWeight=600"
               },
               {
-                name: "Sarah Chen",
-                title: "Senior Equity Analyst",
-                focus: "Equities, Sector Rotation",
-                bio: "With 14 years tracking equity markets, Sarah combines fundamental research with momentum analysis to identify sector rotations before they gain mainstream attention.",
-                expertise: ["Equity Markets", "Sector Analysis", "Technical Analysis"]
+                name: "Ahmed Awan",
+                title: "Market Analyst",
+                focus: "Fundamental Analysis, Market Commentary",
+                bio: "Ahmed delivers timely market insights and commentary across forex, indices, and commodities. His analytical approach combines fundamental drivers with market sentiment to help traders navigate evolving conditions.",
+                expertise: ["Market Analysis", "Economic Data", "Trading Insights"],
+                avatar: "https://api.dicebear.com/7.x/initials/svg?seed=AA&backgroundColor=2d4a6f&fontSize=40&fontWeight=600"
               },
               {
-                name: "Marco Giuliani",
-                title: "Commodities Specialist",
-                focus: "Metals, Energies, Agricultural",
-                bio: "A 16-year veteran of commodity trading, Marco leverages supply-demand dynamics and inventory data to forecast moves in precious metals, energy, and agricultural complexes.",
-                expertise: ["Commodities", "Energy Markets", "Precious Metals"]
-              },
-              {
-                name: "Emily Watson",
-                title: "Economic Data Analyst",
-                focus: "Economic Calendars, Data Interpretation",
-                bio: "Emily's expertise in parsing economic data and central bank communications helps our traders anticipate policy shifts and data-driven market moves.",
-                expertise: ["Economic Data", "Central Bank Policy", "Market Events"]
-              },
-              {
-                name: "David Okonkwo",
-                title: "Technical Analysis Lead",
-                focus: "Chart Patterns, Indicators",
-                bio: "David's 12-year track record in technical analysis identifies crucial price levels and reversal patterns. His work helps traders enter and exit at optimal points.",
-                expertise: ["Technical Analysis", "Chart Patterns", "Trading Signals"]
-              },
-              {
-                name: "Lisa Bergström",
-                title: "Emerging Markets Analyst",
-                focus: "EM Currencies, Regional Equities",
-                bio: "Lisa specializes in capturing alpha from emerging market dislocations. Her regional expertise spans currency crises, central bank intervention, and growth equity trends.",
-                expertise: ["Emerging Markets", "EM Currencies", "Growth Equities"]
+                name: "Bu Seong Kwon",
+                title: "Technical Analyst",
+                focus: "Chart Patterns, Price Action",
+                bio: "Bu Seong specialises in technical analysis and price action across multiple asset classes. His chart work identifies key levels, patterns, and trading setups to help traders time their entries and exits effectively.",
+                expertise: ["Technical Analysis", "Chart Patterns", "Trading Signals"],
+                avatar: "https://api.dicebear.com/7.x/initials/svg?seed=BK&backgroundColor=3d5a7f&fontSize=40&fontWeight=600"
               }
             ].map((analyst, idx) => (
               <div key={idx} className="border rounded-lg p-6 hover:shadow-lg transition">
                 <div className="mb-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 mb-4"></div>
+                  <img src={analyst.avatar} alt={analyst.name} className="w-16 h-16 rounded-full mb-4" />
                   <h3 className="text-xl font-bold text-slate-900">{analyst.name}</h3>
                   <p className="text-sm font-medium text-blue-600 mb-1">{analyst.title}</p>
                   <p className="text-sm text-slate-600 mb-3">{analyst.focus}</p>

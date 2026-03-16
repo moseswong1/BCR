@@ -140,11 +140,11 @@ export default function MarketAnalysisPage() {
                 <div className="space-y-2 mb-6">
                   <div className="flex items-center gap-2 text-sm text-slate-500">
                     <Users className="w-4 h-4 text-purple-500" />
-                    <span>8 Dedicated Market Analysts</span>
+                    <span>3 Dedicated Market Analysts</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-slate-500">
                     <Shield className="w-4 h-4 text-purple-500" />
-                    <span>25+ Years Combined Experience</span>
+                    <span>Global Market Perspective</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-slate-500">
                     <BookOpen className="w-4 h-4 text-purple-500" />
