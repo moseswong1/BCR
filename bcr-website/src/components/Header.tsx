@@ -342,11 +342,11 @@ export function Header() {
           {/* Action buttons */}
           <div className="hidden md:flex items-center space-x-3">
             <Button variant="ghost" asChild>
-              <Link href="/login">{t.header.login}</Link>
+              <a href="https://au.thebcr.com/portal/sign-in" target="_blank" rel="noopener noreferrer">{t.header.login}</a>
             </Button>
 
             <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6" asChild>
-              <Link href="/register">{t.header.joinNow}</Link>
+              <a href="https://au.thebcr.com/portal/sign-up" target="_blank" rel="noopener noreferrer">{t.header.joinNow}</a>
             </Button>
           </div>
 
@@ -370,9 +370,9 @@ export function Header() {
             <a href="/resources" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t.header.resources}</a>
             <a href="/company" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t.header.company}</a>
             <div className="pt-4 border-t border-gray-200 space-y-2">
-              <a href="/login" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t.header.login}</a>
+              <a href="https://au.thebcr.com/portal/sign-in" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{t.header.login}</a>
               <a href="/demo" className="block px-3 py-2 text-base font-medium text-yellow-600 border border-yellow-500 rounded-md text-center hover:bg-yellow-50">{t.header.demoAccount}</a>
-              <a href="/register" className="block px-3 py-2 text-base font-medium bg-yellow-500 text-black rounded-md text-center hover:bg-yellow-600">{t.header.joinNow}</a>
+              <a href="https://au.thebcr.com/portal/sign-up" target="_blank" rel="noopener noreferrer" className="block px-3 py-2 text-base font-medium bg-yellow-500 text-black rounded-md text-center hover:bg-yellow-600">{t.header.joinNow}</a>
             </div>
           </div>
         </div>

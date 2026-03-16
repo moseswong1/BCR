@@ -326,11 +326,11 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/register">
+              <a href="https://au.thebcr.com/portal/sign-up" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" className="bg-black hover:bg-gray-800 text-white font-semibold px-8 py-4 text-lg 2xl:font-bold w-full sm:w-auto">
                   Join Now
                 </Button>
-              </Link>
+              </a>
               <Link href="/demo">
                 <Button
                   variant="outline"

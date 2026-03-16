@@ -24,13 +24,15 @@ export function CTASection() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/register"
+          <a
+            href="https://au.thebcr.com/portal/sign-up"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-xl bg-yellow-500 hover:bg-yellow-400 px-8 py-4 text-lg font-bold text-black transition-all shadow-lg shadow-yellow-500/25 hover:shadow-yellow-400/30 hover:scale-105"
           >
             Open an Account
             <ChevronRight className="w-5 h-5" />
-          </Link>
+          </a>
           <Link
             href="/demo"
             className="inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 px-8 py-4 text-lg font-semibold text-white transition-all backdrop-blur-sm"

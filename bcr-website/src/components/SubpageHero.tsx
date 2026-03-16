@@ -21,7 +21,7 @@ export default function SubpageHero({
 
         <div className="mt-7 flex flex-col sm:flex-row gap-3">
           <Button className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-6" asChild>
-            <Link href="/register">Join now</Link>
+            <a href="https://au.thebcr.com/portal/sign-up" target="_blank" rel="noopener noreferrer">Join now</a>
           </Button>
 
           <Button
